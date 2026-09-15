@@ -207,17 +207,15 @@
   #listView table th:last-child,
   #listView table td:last-child { display: none !important; }
 
-  .readonly-tag {
-    display: inline-block; margin-left: 10px; padding: 4px 10px; border-radius: 999px;
-    background: #eef1f7; color: #6b7280; font-size: 12px; font-weight: 700; vertical-align: middle;
-  }
-  .export-stamp { font-size: 12px; color: #7c8494; margin-left: 10px; }
+  /* 조회 화면을 단순하게 두기 위해 숨기는 버튼들 */
+  button[onclick*="resetFilters"],
+  button[onclick*="exportCsv"] { display: none !important; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>검사성적서 조회<span class="readonly-tag">읽기 전용</span><span class="export-stamp" id="exportStamp"></span></h1>
+  <h1>검사성적서 조회</h1>
   <div class="topbar-stats">
     <div class="stat"><b id="kpiTotal">0</b><span>총 건수</span></div>
     <div class="stat stat-pass"><b id="kpiPass">0</b><span>적합</span></div>
@@ -247,12 +245,8 @@
 
     <div class="filter-bar">
       <div class="filter-item">
-        <label>시작일</label>
-        <input type="date" id="fDateFrom" onchange="applyFilters()" />
-      </div>
-      <div class="filter-item">
-        <label>종료일</label>
-        <input type="date" id="fDateTo" onchange="applyFilters()" />
+        <label>검사일자</label>
+        <input type="date" id="fDate" onchange="applyFilters()" />
       </div>
       <div class="filter-item">
         <label>업체명</label>
@@ -637,15 +631,13 @@
   }
 
   function applyFilters() {
-    const from = document.getElementById('fDateFrom').value;
-    const to = document.getElementById('fDateTo').value;
+    const date = document.getElementById('fDate').value;
     const vendor = document.getElementById('fVendor').value.trim().toLowerCase();
     const item = document.getElementById('fItem').value.trim().toLowerCase();
     const result = document.getElementById('fResult').value;
 
     filteredRecords = allRecords.filter(r => {
-      if (from && r.inspectionDate < from) return false;
-      if (to && r.inspectionDate > to) return false;
+      if (date && r.inspectionDate !== date) return false;
       if (vendor && !(r.vendor || '').toLowerCase().includes(vendor)) return false;
       if (item && !recordItems(r).some(it => (it.itemName || '').toLowerCase().includes(item))) return false;
       if (result && !recordItems(r).some(it => it.result === result)) return false;
@@ -658,8 +650,7 @@
   }
 
   function resetFilters() {
-    document.getElementById('fDateFrom').value = '';
-    document.getElementById('fDateTo').value = '';
+    document.getElementById('fDate').value = '';
     document.getElementById('fVendor').value = '';
     document.getElementById('fItem').value = '';
     document.getElementById('fResult').value = '';

@@ -136,11 +136,9 @@ const READONLY_STYLE = `
   #listView table th:last-child,
   #listView table td:last-child { display: none !important; }
 
-  .readonly-tag {
-    display: inline-block; margin-left: 10px; padding: 4px 10px; border-radius: 999px;
-    background: #eef1f7; color: #6b7280; font-size: 12px; font-weight: 700; vertical-align: middle;
-  }
-  .export-stamp { font-size: 12px; color: #7c8494; margin-left: 10px; }
+  /* 조회 화면을 단순하게 두기 위해 숨기는 버튼들 */
+  button[onclick*="resetFilters"],
+  button[onclick*="exportCsv"] { display: none !important; }
 </style>
 `;
 
@@ -181,7 +179,7 @@ function buildIndexPage() {
     '문서 제목');
   html = tryReplace(html,
     `  <h1>검사성적서 관리</h1>`,
-    `  <h1>검사성적서 조회<span class="readonly-tag">읽기 전용</span><span class="export-stamp" id="exportStamp"></span></h1>`,
+    `  <h1>검사성적서 조회</h1>`,
     '화면 제목');
 
   html = mustReplace(html, '</head>', READONLY_STYLE + '</head>', '읽기 전용 스타일 넣기');

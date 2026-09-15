@@ -226,12 +226,8 @@
 
     <div class="filter-bar">
       <div class="filter-item">
-        <label>시작일</label>
-        <input type="date" id="fDateFrom" onchange="applyFilters()" />
-      </div>
-      <div class="filter-item">
-        <label>종료일</label>
-        <input type="date" id="fDateTo" onchange="applyFilters()" />
+        <label>검사일자</label>
+        <input type="date" id="fDate" onchange="applyFilters()" />
       </div>
       <div class="filter-item">
         <label>업체명</label>
@@ -611,15 +607,13 @@
   }
 
   function applyFilters() {
-    const from = document.getElementById('fDateFrom').value;
-    const to = document.getElementById('fDateTo').value;
+    const date = document.getElementById('fDate').value;
     const vendor = document.getElementById('fVendor').value.trim().toLowerCase();
     const item = document.getElementById('fItem').value.trim().toLowerCase();
     const result = document.getElementById('fResult').value;
 
     filteredRecords = allRecords.filter(r => {
-      if (from && r.inspectionDate < from) return false;
-      if (to && r.inspectionDate > to) return false;
+      if (date && r.inspectionDate !== date) return false;
       if (vendor && !(r.vendor || '').toLowerCase().includes(vendor)) return false;
       if (item && !recordItems(r).some(it => (it.itemName || '').toLowerCase().includes(item))) return false;
       if (result && !recordItems(r).some(it => it.result === result)) return false;
@@ -632,8 +626,7 @@
   }
 
   function resetFilters() {
-    document.getElementById('fDateFrom').value = '';
-    document.getElementById('fDateTo').value = '';
+    document.getElementById('fDate').value = '';
     document.getElementById('fVendor').value = '';
     document.getElementById('fItem').value = '';
     document.getElementById('fResult').value = '';

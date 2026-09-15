@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T05:32:03.593Z",
+  "exportedAt": "2026-09-15T23:54:15.548Z",
   "records": [
     {
       "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
@@ -135,7 +135,7 @@
       "id": "259f0cf0-4c57-4c4e-b72c-c8222689f8ca",
       "inspectionNo": "퍼시스-시험26-08-00042",
       "inspectionDate": "2026-08-21",
-      "vendor": "제일퍼니처",
+      "vendor": "제일 퍼니처",
       "itemName": "FDDX2012001",
       "color": "WW",
       "lotNo": "",
@@ -160,7 +160,7 @@
         "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
       ],
       "createdAt": "2026-08-22T07:27:37.716Z",
-      "updatedAt": "2026-08-24T04:22:36.003Z",
+      "updatedAt": "2026-09-15T23:53:43.176Z",
       "items": [
         {
           "itemName": "FDDX2012001",
