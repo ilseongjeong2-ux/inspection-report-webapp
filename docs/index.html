@@ -98,7 +98,14 @@
 
   .filter-bar { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; padding: 18px 22px; border-bottom: 1px solid var(--border); }
   .filter-item { display: flex; flex-direction: column; gap: 6px; }
-  .filter-item label { font-size: 12.5px; font-weight: 600; color: var(--text-muted); }
+  .filter-item label { font-size: 12.5px; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+  .date-range { display: flex; align-items: center; gap: 6px; }
+  .date-sep { color: var(--text-muted); font-size: 13px; }
+  .link-btn {
+    background: none; border: none; padding: 0; cursor: pointer;
+    font-family: inherit; font-size: 11.5px; font-weight: 600; color: var(--primary);
+  }
+  .link-btn:hover { text-decoration: underline; }
   input, select, textarea {
     font-family: inherit;
     padding: 9px 12px;
@@ -245,8 +252,12 @@
 
     <div class="filter-bar">
       <div class="filter-item">
-        <label>검사일자</label>
-        <input type="date" id="fDate" onchange="applyFilters()" />
+        <label>검사일자<button type="button" class="link-btn" onclick="clearDateFilter()">초기화</button></label>
+        <div class="date-range">
+          <input type="date" id="fDate" onchange="applyFilters()" title="이 날짜 하루만 보려면 왼쪽만 고르세요" />
+          <span class="date-sep">~</span>
+          <input type="date" id="fDateTo" onchange="applyFilters()" title="기간으로 보려면 끝 날짜를 고르세요. 비워두면 왼쪽 날짜 하루만 조회합니다" />
+        </div>
       </div>
       <div class="filter-item">
         <label>업체명</label>
@@ -631,13 +642,21 @@
   }
 
   function applyFilters() {
-    const date = document.getElementById('fDate').value;
+    const dateFrom = document.getElementById('fDate').value;
+    const dateTo = document.getElementById('fDateTo').value;
     const vendor = document.getElementById('fVendor').value.trim().toLowerCase();
     const item = document.getElementById('fItem').value.trim().toLowerCase();
     const result = document.getElementById('fResult').value;
 
     filteredRecords = allRecords.filter(r => {
-      if (date && r.inspectionDate !== date) return false;
+      if (dateFrom || dateTo) {
+        // 한쪽만 골랐으면 그 날짜 하루만, 둘 다 골랐으면 그 기간을 본다. 순서가 뒤바뀌어도 알아서 맞춘다.
+        const a = dateFrom || dateTo;
+        const b = dateTo || dateFrom;
+        const from = a <= b ? a : b;
+        const to = a <= b ? b : a;
+        if (r.inspectionDate < from || r.inspectionDate > to) return false;
+      }
       if (vendor && !(r.vendor || '').toLowerCase().includes(vendor)) return false;
       if (item && !recordItems(r).some(it => (it.itemName || '').toLowerCase().includes(item))) return false;
       if (result && !recordItems(r).some(it => it.result === result)) return false;
@@ -649,8 +668,15 @@
     renderGallery();
   }
 
+  function clearDateFilter() {
+    document.getElementById('fDate').value = '';
+    document.getElementById('fDateTo').value = '';
+    applyFilters();
+  }
+
   function resetFilters() {
     document.getElementById('fDate').value = '';
+    document.getElementById('fDateTo').value = '';
     document.getElementById('fVendor').value = '';
     document.getElementById('fItem').value = '';
     document.getElementById('fResult').value = '';
