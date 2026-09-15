@@ -220,7 +220,16 @@ function writeIfChanged(file, content) {
 }
 
 function main() {
-  const records = JSON.parse(fs.readFileSync(SRC_DB, 'utf-8')).map(toPublicRecord);
+  // 공개 페이지는 검사일자 오름차순(오래된 것부터)으로 보여 준다.
+  // 날짜를 거슬러 등록해도 순서가 어긋나지 않도록 등록 순서가 아니라 날짜로 정렬한다.
+  const records = JSON.parse(fs.readFileSync(SRC_DB, 'utf-8'))
+    .map(toPublicRecord)
+    .sort((a, b) => {
+      const dateA = a.inspectionDate || '';
+      const dateB = b.inspectionDate || '';
+      if (dateA !== dateB) return dateA < dateB ? -1 : 1;
+      return (a.inspectionNo || '') < (b.inspectionNo || '') ? -1 : 1;
+    });
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.mkdirSync(OUT_PHOTOS, { recursive: true });
