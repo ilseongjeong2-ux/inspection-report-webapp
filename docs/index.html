@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>검사성적서 조회 (읽기 전용)</title>
+<style>
+  :root {
+    --bg: #f2f4f9;
+    --card-bg: #ffffff;
+    --border: #e7eaf1;
+    --border-strong: #d6dbe5;
+    --text: #161a23;
+    --text-muted: #7c8494;
+    --primary: #2563eb;
+    --pass: #0d9450;
+    --pass-bg: #e6f6ee;
+    --fail: #d0342c;
+    --fail-bg: #fbeaea;
+    --cond: #b45309;
+    --cond-bg: #fdf3dd;
+    --shadow: 0 1px 2px rgba(15,23,42,0.04);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; background: var(--bg); color: var(--text); }
+  header { background: var(--card-bg); border-bottom: 1px solid var(--border); padding: 18px 28px; }
+  header h1 { font-size: 18px; font-weight: 800; margin: 0 0 4px; }
+  header .note { font-size: 12.5px; color: var(--text-muted); }
+  main { max-width: 1100px; margin: 0 auto; padding: 22px 24px 44px; }
+
+  .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+  .kpi-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .kpi-card .label { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+  .kpi-card .value { font-size: 24px; font-weight: 800; }
+  .kpi-card.pass .value { color: var(--pass); }
+  .kpi-card.fail .value { color: var(--fail); }
+
+  .filter-bar { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: end; box-shadow: var(--shadow); }
+  .filter-item { display: flex; flex-direction: column; gap: 5px; }
+  .filter-item label { font-size: 11.5px; font-weight: 600; color: var(--text-muted); }
+  input, select { font-family: inherit; padding: 7px 10px; border: 1px solid var(--border-strong); border-radius: 8px; background: #fff; color: var(--text); font-size: 13px; }
+  .btn { border: 1px solid var(--border-strong); background: #fff; border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+
+  .table-scroll { overflow-x: auto; border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card-bg); border: 1px solid var(--border); box-shadow: var(--shadow); }
+  th, td { padding: 12px 10px; text-align: center; font-size: 13px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { background: var(--bg); color: var(--text-muted); font-weight: 700; font-size: 12px; }
+  tbody tr:hover { background: var(--bg); }
+  .badge { display: inline-block; padding: 4px 11px; border-radius: 999px; font-size: 11.5px; font-weight: 700; }
+  .badge.적합 { background: var(--pass-bg); color: var(--pass); }
+  .badge.부적합 { background: var(--fail-bg); color: var(--fail); }
+  .badge.조건부적합 { background: var(--cond-bg); color: var(--cond); }
+  .empty-state { text-align: center; padding: 50px 20px; color: var(--text-muted); }
+</style>
+</head>
+<style>
+  .cell-sub { font-size: 11.5px; color: #7c8494; margin-top: 4px; }
+</style>
+<body>
+
+<header>
+  <h1>검사성적서 조회 (읽기 전용)</h1>
+  <div class="note">사내 PC에서 마지막으로 내보낸 시점까지의 요약 데이터입니다. 실시간 데이터가 아니며, 사진·불량내용·비고 등 상세 내용은 포함되지 않습니다.</div>
+  <div class="note" id="exportedAt"></div>
+</header>
+
+<main>
+  <div class="kpi-row">
+    <div class="kpi-card"><div class="label">총 건수</div><div class="value" id="kpiTotal">0</div></div>
+    <div class="kpi-card pass"><div class="label">적합</div><div class="value" id="kpiPass">0</div></div>
+    <div class="kpi-card fail"><div class="label">부적합 / 조건부</div><div class="value" id="kpiFail">0</div></div>
+    <div class="kpi-card"><div class="label">적합률</div><div class="value" id="kpiRate">0%</div></div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-item"><label>시작일</label><input type="date" id="fDateFrom" onchange="applyFilters()" /></div>
+    <div class="filter-item"><label>종료일</label><input type="date" id="fDateTo" onchange="applyFilters()" /></div>
+    <div class="filter-item"><label>업체명</label><input type="text" id="fVendor" placeholder="업체명 검색" oninput="applyFilters()" /></div>
+    <div class="filter-item"><label>품목명</label><input type="text" id="fItem" placeholder="품목명 검색" oninput="applyFilters()" /></div>
+    <div class="filter-item">
+      <label>검사결과</label>
+      <select id="fResult" onchange="applyFilters()">
+        <option value="">전체</option>
+        <option value="적합">적합</option>
+        <option value="부적합">부적합</option>
+        <option value="조건부적합">조건부적합</option>
+      </select>
+    </div>
+    <button class="btn" onclick="resetFilters()">필터 초기화</button>
+    <button class="btn" onclick="exportCsv()">CSV 내보내기</button>
+    <button class="btn" onclick="document.getElementById('csvFileInput').click()">CSV 불러오기</button>
+    <input type="file" id="csvFileInput" accept=".csv,text/csv" onchange="importCsv(event)" hidden />
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>문서번호</th>
+          <th>검사일자</th>
+          <th>업체명</th>
+          <th>품목명</th>
+          <th>색상</th>
+          <th>수량</th>
+          <th>검사자</th>
+          <th>검사결과</th>
+        </tr>
+      </thead>
+      <tbody id="listBody"></tbody>
+    </table>
+  </div>
+  <div class="empty-state" id="listEmpty" style="display:none;">데이터가 없습니다.</div>
+</main>
+
+<script>
+  let allRecords = [];
+  let filteredRecords = [];
+
+  // 성적서 1장에 품목이 여러 개일 수 있다. 예전 형식(품목 1개)도 같은 모양으로 맞춰 준다.
+  function recordItems(r) {
+    if (r.items && r.items.length) return r.items;
+    return [{ itemName: r.itemName || '', color: r.color || '', quantity: r.quantity, result: r.result || '적합' }];
+  }
+  function summarizeField(items, field) {
+    const first = items.length ? (items[0][field] || '') : '';
+    return items.length > 1 ? `${first} 외 ${items.length - 1}건` : first;
+  }
+  function itemsTooltip(items) {
+    return items.map((it, i) => {
+      const parts = [it.itemName, it.color].filter(Boolean).join(' / ');
+      const qty = it.quantity != null ? ` · ${it.quantity}개` : '';
+      return `${i + 1}. ${parts}${qty} · ${it.result || ''}`;
+    }).join('\n');
+  }
+  function totalQuantity(items) {
+    const numbers = items.map(it => it.quantity).filter(q => typeof q === 'number' && Number.isFinite(q));
+    return numbers.length ? numbers.reduce((sum, n) => sum + n, 0) : null;
+  }
+  function escHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  function escAttr(value) {
+    return escHtml(value).replace(/"/g, '&quot;');
+  }
+
+  async function loadData() {
+    try {
+      const res = await fetch('data.json');
+      const payload = await res.json();
+      // 예전 형식(배열)과 새 형식({exportedAt, records}) 둘 다 읽는다.
+      allRecords = Array.isArray(payload) ? payload : (payload.records || []);
+      const exportedAt = Array.isArray(payload) ? '' : (payload.exportedAt || '');
+      if (exportedAt) {
+        document.getElementById('exportedAt').textContent =
+          '데이터 기준: ' + exportedAt.slice(0, 16).replace('T', ' ');
+      }
+      applyFilters();
+    } catch (err) {
+      document.getElementById('listEmpty').style.display = 'block';
+      document.getElementById('listEmpty').textContent = '데이터를 불러오지 못했습니다: ' + err.message;
+    }
+  }
+
+  function applyFilters() {
+    const from = document.getElementById('fDateFrom').value;
+    const to = document.getElementById('fDateTo').value;
+    const vendor = document.getElementById('fVendor').value.trim().toLowerCase();
+    const item = document.getElementById('fItem').value.trim().toLowerCase();
+    const result = document.getElementById('fResult').value;
+
+    filteredRecords = allRecords.filter(r => {
+      if (from && r.inspectionDate < from) return false;
+      if (to && r.inspectionDate > to) return false;
+      if (vendor && !(r.vendor || '').toLowerCase().includes(vendor)) return false;
+      if (item && !recordItems(r).some(it => (it.itemName || '').toLowerCase().includes(item))) return false;
+      if (result && !recordItems(r).some(it => it.result === result)) return false;
+      return true;
+    });
+
+    renderKpi();
+    renderList();
+  }
+
+  function resetFilters() {
+    document.getElementById('fDateFrom').value = '';
+    document.getElementById('fDateTo').value = '';
+    document.getElementById('fVendor').value = '';
+    document.getElementById('fItem').value = '';
+    document.getElementById('fResult').value = '';
+    applyFilters();
+  }
+
+  const csvFields = [
+    ['inspectionNo', '문서번호'],
+    ['inspectionDate', '검사일자'],
+    ['vendor', '업체명'],
+    ['itemName', '품목명'],
+    ['color', '색상'],
+    ['quantity', '수량'],
+    ['inspector', '검사자'],
+    ['result', '검사결과']
+  ];
+
+  function escapeCsvValue(value) {
+    const text = value == null ? '' : String(value);
+    return /[",\r\n]/.test(text) ? '"' + text.replace(/"/g, '""') + '"' : text;
+  }
+
+  function exportCsv() {
+    // 품목이 여러 개인 성적서는 품목마다 한 줄씩 나간다.
+    const itemFields = ['itemName', 'color', 'quantity', 'result'];
+    const rows = [csvFields.map(([, label]) => label)];
+    filteredRecords.forEach(record => {
+      recordItems(record).forEach(item => {
+        rows.push(csvFields.map(([field]) =>
+          escapeCsvValue(itemFields.includes(field) ? item[field] : record[field])));
+      });
+    });
+    const csv = '\uFEFF' + rows.map(row => row.join(',')).join('\r\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = '검사성적서_' + new Date().toISOString().slice(0, 10) + '.csv';
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let value = '';
+    let quoted = false;
+    for (let index = 0; index < text.length; index += 1) {
+      const character = text[index];
+      if (character === '"') {
+        if (quoted && text[index + 1] === '"') {
+          value += '"';
+          index += 1;
+        } else {
+          quoted = !quoted;
+        }
+      } else if (character === ',' && !quoted) {
+        row.push(value);
+        value = '';
+      } else if ((character === '\n' || character === '\r') && !quoted) {
+        if (character === '\r' && text[index + 1] === '\n') index += 1;
+        row.push(value);
+        if (row.some(cell => cell !== '')) rows.push(row);
+        row = [];
+        value = '';
+      } else {
+        value += character;
+      }
+    }
+    if (value || row.length) {
+      row.push(value);
+      if (row.some(cell => cell !== '')) rows.push(row);
+    }
+    return rows;
+  }
+
+  async function importCsv(event) {
+    const input = event.target;
+    const file = input.files[0];
+    if (!file) return;
+    try {
+      const text = (await file.text()).replace(/^\uFEFF/, '');
+      const rows = parseCsv(text);
+      if (rows.length < 2) throw new Error('헤더와 데이터가 있는 CSV 파일을 선택해 주세요.');
+      const header = rows[0].map(cell => cell.trim());
+      const fieldIndexes = csvFields.map(([, label]) => header.indexOf(label));
+      if (fieldIndexes.some(index => index === -1)) {
+        throw new Error('검사성적서 CSV 형식의 헤더가 아닙니다.');
+      }
+      allRecords = rows.slice(1).map(row => {
+        const record = {};
+        csvFields.forEach(([field], index) => {
+          record[field] = row[fieldIndexes[index]] || '';
+        });
+        if (record.quantity !== '') record.quantity = Number(record.quantity) || record.quantity;
+        record.items = [{
+          itemName: record.itemName, color: record.color,
+          quantity: record.quantity, result: record.result
+        }];
+        return record;
+      });
+      applyFilters();
+    } catch (err) {
+      alert('CSV 불러오기에 실패했습니다: ' + err.message);
+    } finally {
+      input.value = '';
+    }
+  }
+
+  function renderKpi() {
+    const total = filteredRecords.length;
+    const pass = filteredRecords.filter(r => r.result === '적합').length;
+    const fail = total - pass;
+    const rate = total ? Math.round((pass / total) * 100) : 0;
+    document.getElementById('kpiTotal').textContent = total;
+    document.getElementById('kpiPass').textContent = pass;
+    document.getElementById('kpiFail').textContent = fail;
+    document.getElementById('kpiRate').textContent = rate + '%';
+  }
+
+  function renderList() {
+    const body = document.getElementById('listBody');
+    const empty = document.getElementById('listEmpty');
+    body.innerHTML = '';
+    if (!filteredRecords.length) {
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+    filteredRecords
+      .slice()
+      .sort((a, b) => (a.inspectionDate < b.inspectionDate ? 1 : -1))
+      .forEach(r => {
+        const tr = document.createElement('tr');
+        const items = recordItems(r);
+        const tooltip = escAttr(itemsTooltip(items));
+        const quantity = totalQuantity(items);
+        const failCount = items.filter(it => it.result !== '적합').length;
+        const resultCell = items.length > 1
+          ? `<span class="badge ${r.result}">${r.result || ''}</span>
+             <div class="cell-sub">품목 ${items.length}건 중 ${failCount ? failCount + '건 불합격' : '전체 적합'}</div>`
+          : `<span class="badge ${r.result}">${r.result || ''}</span>`;
+        tr.innerHTML = `
+          <td>${escHtml(r.inspectionNo)}</td>
+          <td>${escHtml(r.inspectionDate)}</td>
+          <td>${escHtml(r.vendor)}</td>
+          <td title="${tooltip}">${escHtml(summarizeField(items, 'itemName'))}</td>
+          <td title="${tooltip}">${escHtml(summarizeField(items, 'color'))}</td>
+          <td title="${tooltip}">${quantity != null ? quantity : ''}</td>
+          <td>${escHtml(r.inspector)}</td>
+          <td>${resultCell}</td>
+        `;
+        body.appendChild(tr);
+      });
+  }
+
+  loadData();
+</script>
+</body>
+</html>

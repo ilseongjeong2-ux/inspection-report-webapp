@@ -1,0 +1,15 @@
+{
+  "name": "inspection-report-webapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "multer": "^2.0.0",
+    "node-windows": "^1.0.0-beta.8"
+  }
+}

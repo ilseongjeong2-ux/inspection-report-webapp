@@ -1,0 +1,50 @@
+{
+  "exportedAt": "2026-09-15T02:37:16.835Z",
+  "records": [
+    {
+      "inspectionNo": "퍼시스-시험26-08-00041",
+      "inspectionDate": "2026-08-18",
+      "vendor": "에픽",
+      "inspector": "정일성",
+      "result": "적합",
+      "items": [
+        {
+          "itemName": "XXXX2601246",
+          "color": "UA",
+          "quantity": 1,
+          "result": "적합"
+        }
+      ]
+    },
+    {
+      "inspectionNo": "퍼시스-시험26-08-00042",
+      "inspectionDate": "2026-08-21",
+      "vendor": "제일퍼니처",
+      "inspector": "정일성",
+      "result": "부적합",
+      "items": [
+        {
+          "itemName": "FDDX2012001",
+          "color": "WW",
+          "quantity": 1,
+          "result": "부적합"
+        }
+      ]
+    },
+    {
+      "inspectionNo": "퍼시스-시험26-09-00043",
+      "inspectionDate": "2026-09-04",
+      "vendor": "에픽",
+      "inspector": "정일성",
+      "result": "적합",
+      "items": [
+        {
+          "itemName": "MCIXXF260504",
+          "color": "WW",
+          "quantity": 1,
+          "result": "적합"
+        }
+      ]
+    }
+  ]
+}

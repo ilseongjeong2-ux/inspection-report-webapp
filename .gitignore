@@ -1,0 +1,13 @@
+# 설치 파일 (npm install 로 다시 받으면 되므로 올리지 않음)
+node_modules/
+
+# 실제 검사 데이터와 사진 — 사내 PC에만 두고 GitHub에는 올리지 않는다.
+# 공개용 요약 데이터는 export-github-data.js 가 github-pages/data.json 으로 따로 만든다.
+data/
+
+# 작업 중 만들어진 백업본
+*.backup-*
+public/*.backup-*
+
+# 실행 로그
+server_log.txt
