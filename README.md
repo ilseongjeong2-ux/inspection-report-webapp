@@ -73,12 +73,16 @@ PORT=4000 DATA_DIR=./testdata node server.js
 
 사내 PC에서 아래를 실행하면 공개용 요약 데이터를 다시 만들어 GitHub에 올립니다.
 
+**`깃허브_업데이트.bat` 을 더블클릭**하면 끝납니다. 내보내기 → 기록 → 업로드를 한 번에 합니다.
+
+명령으로 직접 하려면:
+
 ```bash
-node export-github-data.js     # docs/data.json 다시 생성
-git add -A && git commit -m "데이터 갱신" && git push
+node update-github.js          # 위 배치 파일이 실제로 실행하는 것
 ```
 
-`깃허브_업데이트.bat` 을 더블클릭해도 같은 일을 합니다.
+> 배치 파일에 한글을 넣으면 Windows 명령창 인코딩 때문에 글자가 깨져 실행이 실패한다.
+> 그래서 `.bat` 은 영문 4줄만 두고 안내 문구는 모두 `update-github.js` 에서 출력한다.
 
 **공개 페이지에 나가는 항목**: 문서번호, 검사일자, 업체명, 검사자, 품목명, 색상, 수량, 판정
 
@@ -93,6 +97,7 @@ server.js                 Express 서버 (정적 파일 + API)
 public/index.html         관리 화면 (대시보드 + 등록/수정)
 public/report.html        검사성적서 출력 양식
 export-github-data.js     공개용 요약 데이터 생성
+update-github.js          공개 페이지 갱신 (내보내기 + 업로드)
 docs/                     GitHub Pages 로 게시되는 읽기 전용 페이지
 data/                     실제 데이터와 사진 (저장소에 올리지 않음)
 ```
