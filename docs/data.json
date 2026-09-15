@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T03:07:15.017Z",
+  "exportedAt": "2026-09-15T04:58:44.720Z",
   "records": [
     {
       "id": "ed864b65-2759-4c2d-901b-1cebcb10b887",
@@ -141,6 +141,93 @@
           "defectPhotoUrls": []
         }
       ]
+    },
+    {
+      "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
+      "inspectionNo": "퍼시스-시험26-09-00044",
+      "inspectionDate": "2026-09-11",
+      "vendor": "올품 퍼니처",
+      "items": [
+        {
+          "itemName": "ICB60CP05A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248116_b65vi_ICB60CP05A (4).jpg",
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248122_hhegq_ICB60CP05A (2).jpg",
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248126_3wp3w_ICB60CP05A (3).jpg",
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248129_ivzkj_ICB60CP05A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "DSBC0083H",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248133_hfvtd_DSBC0083H.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "ICV20DD00A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248137_8anii_ICV20DD00A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "DSCC0063CH",
+          "color": "OS",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ],
+      "inspector": "박동현",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=4U1tfCXnioqe0YlFxxMeTRZyLQFrffaqXjjG8rs4gKA",
+      "reportDocUrl": "",
+      "remarks": "1. 전 품목 외관 세척미흡 (양산전으로 본 물량 생산시 세척강화 요청완료)",
+      "createdAt": "2026-09-15T04:42:48.151Z",
+      "itemName": "ICB60CP05A",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "photoUrls": [
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248116_b65vi_ICB60CP05A (4).jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248122_hhegq_ICB60CP05A (2).jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248126_3wp3w_ICB60CP05A (3).jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248129_ivzkj_ICB60CP05A.jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248133_hfvtd_DSBC0083H.jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248137_8anii_ICV20DD00A.jpg",
+        "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-09-15T04:57:28.164Z"
     }
   ]
 }

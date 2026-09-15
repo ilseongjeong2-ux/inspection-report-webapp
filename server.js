@@ -3,6 +3,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const os = require('os');
 
 const PORT = Number(process.env.PORT) || 3000;
 const DATA_DIR = process.env.DATA_DIR ? path.resolve(process.env.DATA_DIR) : path.join(__dirname, 'data');
@@ -11,6 +12,7 @@ const UPLOAD_DIR = path.join(DATA_DIR, 'uploads');
 const SCHEDULED_FILE = path.join(DATA_DIR, 'scheduled.json');
 const DOC_NO_FLOOR_BY_YEAR = { '2026': 33 };
 const RESULT_VALUES = ['적합', '부적합', '조건부적합'];
+const MAX_PHOTO_BYTES = 100 * 1024 * 1024; // 사진 한 장 최대 용량
 
 fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 if (!fs.existsSync(DB_FILE)) fs.writeFileSync(DB_FILE, '[]', 'utf-8');
@@ -123,7 +125,7 @@ const upload = multer({
       cb(null, Date.now() + '_' + Math.random().toString(36).slice(2, 7) + '_' + file.originalname);
     }
   }),
-  limits: { fileSize: 15 * 1024 * 1024, files: 300 }
+  limits: { fileSize: MAX_PHOTO_BYTES, files: 300 }
 });
 // 사진 input 이름이 품목 순서에 따라 photos_0 / defectPhotos_0 ... 으로 늘어나므로 any()로 받는다.
 const uploadAny = upload.any();
@@ -355,6 +357,52 @@ app.delete('/api/inspections/:id', (req, res) => {
   res.json({ success: true });
 });
 
+// 사내망 IP는 바뀔 수 있으므로 켤 때마다 지금 주소를 보여 준다.
+function lanAddresses() {
+  return Object.values(os.networkInterfaces())
+    .flat()
+    .filter(net => net && net.family === 'IPv4' && !net.internal)
+    .map(net => net.address);
+}
+
+const MULTER_MESSAGES = {
+  LIMIT_FILE_SIZE: `사진 한 장의 용량이 너무 큽니다. (한 장당 ${Math.round(MAX_PHOTO_BYTES / 1024 / 1024)}MB까지)`,
+  LIMIT_FILE_COUNT: '사진 개수가 너무 많습니다.',
+  LIMIT_UNEXPECTED_FILE: '예상하지 못한 사진 항목이 있습니다.',
+  LIMIT_PART_COUNT: '한 번에 보낼 수 있는 양을 넘었습니다. 품목이나 사진을 나눠서 저장해 주세요.'
+};
+
+function logError(message) {
+  console.error(message);
+  try {
+    fs.appendFileSync(path.join(__dirname, 'server_log.txt'),
+      `[${new Date().toISOString()}] ${message}\n`, 'utf-8');
+  } catch { /* 기록 실패는 무시한다 */ }
+}
+
+// 라우트에서 처리되지 못한 오류를 여기서 붙잡아 사람이 읽을 수 있는 메시지로 돌려준다.
+app.use((err, req, res, next) => {
+  if (res.headersSent) return next(err);
+  if (err && err.name === 'MulterError') {
+    logError(`[사진 업로드 오류] ${err.code} (${err.field || '-'}) ${req.method} ${req.originalUrl}`);
+    return res.status(400).json({ error: MULTER_MESSAGES[err.code] || ('사진 업로드 오류: ' + err.code) });
+  }
+  logError(`[서버 오류] ${req.method} ${req.originalUrl}\n${err && err.stack ? err.stack : err}`);
+  res.status(500).json({ error: (err && err.message) || '알 수 없는 서버 오류' });
+});
+
 app.listen(PORT, () => {
-  console.log(`검사성적서 서버 실행 중: http://localhost:${PORT}`);
+  console.log('');
+  console.log('============================================');
+  console.log('  검사성적서 서버가 실행 중입니다');
+  console.log('============================================');
+  console.log('');
+  console.log('  이 PC에서    :  http://localhost:' + PORT);
+  lanAddresses().forEach(address => {
+    console.log('  사내 다른 PC :  http://' + address + ':' + PORT);
+  });
+  console.log('');
+  console.log('  종료하려면 이 창을 닫으세요.');
+  console.log('  창을 닫으면 동료들도 접속할 수 없습니다.');
+  console.log('');
 });

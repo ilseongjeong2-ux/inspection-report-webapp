@@ -1263,6 +1263,49 @@
     }).filter(entry => entry.values.itemName);
   }
 
+  const MAX_PHOTO_MB = 100;
+
+  // 사진을 실제로 한 조각 읽어 본다. USB/네트워크 드라이브가 빠졌거나 파일이 옮겨졌으면 여기서 걸린다.
+  async function checkPhotosBeforeUpload(entries, status) {
+    for (let index = 0; index < entries.length; index += 1) {
+      const files = [...entries[index].state.files, ...entries[index].state.defectFiles];
+      for (const file of files) {
+        const sizeMb = file.size / 1024 / 1024;
+        if (sizeMb > MAX_PHOTO_MB) {
+          throw new Error(
+            `사진 "${file.name}" 의 용량이 ${sizeMb.toFixed(1)}MB 로 너무 큽니다. ` +
+            `한 장당 ${MAX_PHOTO_MB}MB 까지 올릴 수 있습니다.`
+          );
+        }
+        try {
+          await file.slice(0, 1).arrayBuffer();
+        } catch {
+          throw new Error(
+            `사진 "${file.name}" 을 읽을 수 없습니다. ` +
+            '파일이 옮겨졌거나 USB·SD카드·네트워크 드라이브가 분리된 것 같습니다. ' +
+            '사진을 이 PC로 복사한 뒤 다시 선택해 주세요.'
+          );
+        }
+      }
+    }
+    const totalMb = entries.reduce((sum, entry) =>
+      sum + [...entry.state.files, ...entry.state.defectFiles].reduce((s, f) => s + f.size, 0), 0) / 1024 / 1024;
+    if (totalMb > 5) {
+      status.textContent = `사진 ${totalMb.toFixed(1)}MB 를 올리는 중입니다. 잠시만 기다려 주세요...`;
+    }
+  }
+
+  // fetch 가 실패하면 브라우저는 "Failed to fetch" 라고만 알려 준다. 무엇을 확인해야 하는지 덧붙인다.
+  function describeSaveError(err) {
+    const message = (err && err.message) || '알 수 없는 오류';
+    if (/failed to fetch|networkerror|load failed/i.test(message)) {
+      return '서버에 연결하지 못했습니다. ' +
+        '(1) 검은색 서버 창이 켜져 있는지 확인해 주세요. ' +
+        '(2) 사진이 USB·SD카드에 있다면 PC로 복사한 뒤 다시 선택해 주세요.';
+    }
+    return message;
+  }
+
   document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const submitBtn = document.getElementById('submitBtn');
@@ -1274,6 +1317,7 @@
     try {
       const entries = collectItemEntries();
       if (!entries.length) throw new Error('품목을 1개 이상 입력해 주세요.');
+      await checkPhotosBeforeUpload(entries, status);
 
       const formData = new FormData();
       formData.append('inspectionDate', document.getElementById('iDate').value);
@@ -1309,7 +1353,7 @@
       setTimeout(closeRegisterModal, 600);
     } catch (err) {
       status.className = 'status-msg error';
-      status.textContent = '등록 실패: ' + err.message;
+      status.textContent = '등록 실패: ' + describeSaveError(err);
     } finally {
       submitBtn.disabled = false;
     }
