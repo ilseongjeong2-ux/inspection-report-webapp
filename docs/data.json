@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-15T05:19:29.165Z",
+  "exportedAt": "2026-09-15T05:32:03.593Z",
   "records": [
     {
       "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
@@ -14,7 +14,7 @@
           "quantity": 1,
           "result": "적합",
           "defectDetail": "",
-          "remarks": "",
+          "remarks": "세척 부적합",
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248116_b65vi_ICB60CP05A (4).jpg",
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248122_hhegq_ICB60CP05A (2).jpg",
@@ -30,7 +30,7 @@
           "quantity": 1,
           "result": "적합",
           "defectDetail": "",
-          "remarks": "",
+          "remarks": "세척 부적합",
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248133_hfvtd_DSBC0083H.jpg"
           ],
@@ -43,7 +43,7 @@
           "quantity": 1,
           "result": "적합",
           "defectDetail": "",
-          "remarks": "",
+          "remarks": "세척 부적합",
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248137_8anii_ICV20DD00A.jpg"
           ],
@@ -56,7 +56,7 @@
           "quantity": 1,
           "result": "적합",
           "defectDetail": "",
-          "remarks": "",
+          "remarks": "세척 부적합",
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
           ],
@@ -68,7 +68,7 @@
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=4U1tfCXnioqe0YlFxxMeTRZyLQFrffaqXjjG8rs4gKA",
       "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=m09CuZZqdrNOS6yxyTExs2p7Wc9zamlaSBfrUT_yTfI",
-      "remarks": "1. 전 품목 외관 세척미흡 (양산전으로 본 물량 생산시 세척강화 요청완료)",
+      "remarks": "1. 전 품목 외관 세척미흡 (양산전으로 본 물량 생산시 세척강화 요청완료)\r\n2. 해당 검사품은 세척완료",
       "createdAt": "2026-09-15T04:42:48.151Z",
       "itemName": "ICB60CP05A",
       "color": "WW",
@@ -86,7 +86,7 @@
         "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-15T05:19:21.986Z"
+      "updatedAt": "2026-09-15T05:31:54.234Z"
     },
     {
       "id": "96d39668-5d50-4a5a-b2b4-1bffc4038f2d",
