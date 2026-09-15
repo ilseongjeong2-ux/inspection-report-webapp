@@ -183,7 +183,7 @@
       return;
     }
     try {
-      const res = await fetch('data.json');
+      const res = await fetch('data.json?t=' + Date.now());
       if (!res.ok) throw new Error('데이터를 불러오지 못했습니다.');
       const payload = await res.json();
       const list = Array.isArray(payload) ? payload : (payload.records || []);

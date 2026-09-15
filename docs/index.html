@@ -473,7 +473,7 @@
 
   async function loadData() {
     try {
-      const res = await fetch('data.json');
+      const res = await fetch('data.json?t=' + Date.now());
       if (!res.ok) throw new Error('서버 응답 오류 (' + res.status + ')');
       const payload = await res.json();
       allRecords = Array.isArray(payload) ? payload : (payload.records || []);
@@ -494,7 +494,7 @@
 
   async function loadScheduled() {
     try {
-      const res = await fetch('scheduled.json');
+      const res = await fetch('scheduled.json?t=' + Date.now());
       if (!res.ok) throw new Error('서버 응답 오류 (' + res.status + ')');
       scheduledItems = await res.json();
       renderScheduleSummary();

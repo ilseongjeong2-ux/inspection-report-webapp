@@ -158,7 +158,7 @@ function buildIndexPage() {
   let html = fs.readFileSync(path.join(SRC_PUBLIC, 'index.html'), 'utf-8');
 
   // 데이터를 서버 API 대신 data.json 에서 읽는다.
-  html = mustReplace(html, `fetch('/api/inspections')`, `fetch('data.json')`, '검사 데이터 읽기');
+  html = mustReplace(html, `fetch('/api/inspections')`, `fetch('data.json?t=' + Date.now())`, '검사 데이터 읽기');
   html = mustReplace(html,
     `      allRecords = await res.json();`,
     `      const payload = await res.json();
@@ -168,7 +168,7 @@ function buildIndexPage() {
         if (stamp) stamp.textContent = '데이터 기준: ' + payload.exportedAt.slice(0, 16).replace('T', ' ');
       }`,
     '검사 데이터 담기');
-  html = mustReplace(html, `fetch('/api/scheduled')`, `fetch('scheduled.json')`, '입고예정 읽기');
+  html = mustReplace(html, `fetch('/api/scheduled')`, `fetch('scheduled.json?t=' + Date.now())`, '입고예정 읽기');
 
   // 제목을 조회용으로 바꾸고 읽기 전용임을 표시한다.
   html = tryReplace(html,
@@ -193,7 +193,7 @@ function buildReportPage() {
     `      const res = await fetch(\`/api/inspections/\${id}\`);
       if (!res.ok) throw new Error('문서를 찾을 수 없습니다.');
       const r = await res.json();`,
-    `      const res = await fetch('data.json');
+    `      const res = await fetch('data.json?t=' + Date.now());
       if (!res.ok) throw new Error('데이터를 불러오지 못했습니다.');
       const payload = await res.json();
       const list = Array.isArray(payload) ? payload : (payload.records || []);
