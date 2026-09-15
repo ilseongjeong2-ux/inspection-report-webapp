@@ -203,6 +203,10 @@
   #registerModal,
   #scheduleRegisterModal { display: none !important; }
 
+  /* 목록 맨 오른쪽 '관리' 열은 등록/수정/삭제 전용이므로 열 자체를 숨긴다 */
+  #listView table th:last-child,
+  #listView table td:last-child { display: none !important; }
+
   .readonly-tag {
     display: inline-block; margin-left: 10px; padding: 4px 10px; border-radius: 999px;
     background: #eef1f7; color: #6b7280; font-size: 12px; font-weight: 700; vertical-align: middle;

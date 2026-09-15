@@ -1,147 +1,6 @@
 {
-  "exportedAt": "2026-09-15T05:01:12.926Z",
+  "exportedAt": "2026-09-15T05:07:43.161Z",
   "records": [
-    {
-      "id": "ed864b65-2759-4c2d-901b-1cebcb10b887",
-      "inspectionNo": "퍼시스-시험26-08-00041",
-      "inspectionDate": "2026-08-18",
-      "vendor": "에픽",
-      "itemName": "XXXX2601246",
-      "color": "UA",
-      "lotNo": "",
-      "quantity": 1,
-      "inspector": "정일성",
-      "inspectionItem": "외관 및 치수",
-      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
-      "result": "적합",
-      "defectDetail": "",
-      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=P_dLhBTX4kHuLhjOJpT8cF_3Ls0PRERtfqOLs4LNQ9U",
-      "remarks": "",
-      "photoUrls": [
-        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569331_IMG_6112.jpg",
-        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569337_IMG_6113.jpg",
-        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569362_IMG_6114.jpg",
-        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
-      ],
-      "defectPhotoUrls": [],
-      "createdAt": "2026-08-18T07:52:49.391Z",
-      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=bJ0j1vY6St8nRwKce9Cz3bmgCs7vNrHwtzhEfVZl04M",
-      "updatedAt": "2026-08-22T07:28:00.905Z",
-      "items": [
-        {
-          "itemName": "XXXX2601246",
-          "color": "UA",
-          "lotNo": "",
-          "quantity": 1,
-          "result": "적합",
-          "defectDetail": "",
-          "remarks": "",
-          "photoUrls": [
-            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569331_IMG_6112.jpg",
-            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569337_IMG_6113.jpg",
-            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569362_IMG_6114.jpg",
-            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
-          ],
-          "defectPhotoUrls": []
-        }
-      ]
-    },
-    {
-      "id": "259f0cf0-4c57-4c4e-b72c-c8222689f8ca",
-      "inspectionNo": "퍼시스-시험26-08-00042",
-      "inspectionDate": "2026-08-21",
-      "vendor": "제일퍼니처",
-      "itemName": "FDDX2012001",
-      "color": "WW",
-      "lotNo": "",
-      "quantity": 1,
-      "inspector": "정일성",
-      "inspectionItem": "외관 및 치수",
-      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
-      "result": "부적합",
-      "defectDetail": "5X15 보링 2개소 깊이 불량 ( 정 15 부 12)",
-      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=P_dLhBTX4kHuLhjOJpT8cCCSqNRxQZucUq9X7Ci7EWw",
-      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=bJ0j1vY6St8nRwKce9Cz3YLb13wzLw5_fKeQzJ4uH9U",
-      "remarks": "1.  날물 셋팅이상으로 인한 부적합 발생건\r\n2. 추가 입고검사 없이 양산전 해당부분 조치완료 사진 발송예정 (이장호 팀장)\r\n3. 입고 검사건은 수리하여 출고완료",
-      "photoUrls": [
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657675_IMG_6193.jpg",
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657679_IMG_6194.jpg",
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657682_IMG_6195.jpg",
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657702_IMG_6196.jpg"
-      ],
-      "defectPhotoUrls": [
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657707_IMG_6190.jpg",
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
-        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
-      ],
-      "createdAt": "2026-08-22T07:27:37.716Z",
-      "updatedAt": "2026-08-24T04:22:36.003Z",
-      "items": [
-        {
-          "itemName": "FDDX2012001",
-          "color": "WW",
-          "lotNo": "",
-          "quantity": 1,
-          "result": "부적합",
-          "defectDetail": "5X15 보링 2개소 깊이 불량 ( 정 15 부 12)",
-          "remarks": "",
-          "photoUrls": [
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657675_IMG_6193.jpg",
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657679_IMG_6194.jpg",
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657682_IMG_6195.jpg",
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657702_IMG_6196.jpg"
-          ],
-          "defectPhotoUrls": [
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657707_IMG_6190.jpg",
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
-            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "96d39668-5d50-4a5a-b2b4-1bffc4038f2d",
-      "inspectionNo": "퍼시스-시험26-09-00043",
-      "inspectionDate": "2026-09-04",
-      "vendor": "에픽",
-      "itemName": "MCIXXF260504",
-      "color": "WW",
-      "lotNo": "",
-      "quantity": 1,
-      "inspector": "정일성",
-      "inspectionItem": "외관 및 치수",
-      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물\r\n5. 세척 및 글루라인",
-      "result": "적합",
-      "defectDetail": "",
-      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=5jVZ9t8NY1p-yDz0rRIu1zDArYlZPbKvVPDQUpLWsG0",
-      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=m09CuZZqdrNOS6yxyTExs7MiqFGgTRu5bO6ueFyljds",
-      "remarks": "",
-      "photoUrls": [
-        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196381_IMG_6488 (1).jpg",
-        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196388_IMG_6487 (1).jpg",
-        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
-      ],
-      "defectPhotoUrls": [],
-      "createdAt": "2026-09-15T00:29:56.410Z",
-      "updatedAt": "2026-09-15T00:40:03.266Z",
-      "items": [
-        {
-          "itemName": "MCIXXF260504",
-          "color": "WW",
-          "lotNo": "",
-          "quantity": 1,
-          "result": "적합",
-          "defectDetail": "",
-          "remarks": "",
-          "photoUrls": [
-            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196381_IMG_6488 (1).jpg",
-            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196388_IMG_6487 (1).jpg",
-            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
-          ],
-          "defectPhotoUrls": []
-        }
-      ]
-    },
     {
       "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
       "inspectionNo": "퍼시스-시험26-09-00044",
@@ -228,6 +87,147 @@
       ],
       "defectPhotoUrls": [],
       "updatedAt": "2026-09-15T04:57:28.164Z"
+    },
+    {
+      "id": "96d39668-5d50-4a5a-b2b4-1bffc4038f2d",
+      "inspectionNo": "퍼시스-시험26-09-00043",
+      "inspectionDate": "2026-09-04",
+      "vendor": "에픽",
+      "itemName": "MCIXXF260504",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물\r\n5. 세척 및 글루라인",
+      "result": "적합",
+      "defectDetail": "",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=5jVZ9t8NY1p-yDz0rRIu1zDArYlZPbKvVPDQUpLWsG0",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=m09CuZZqdrNOS6yxyTExs7MiqFGgTRu5bO6ueFyljds",
+      "remarks": "",
+      "photoUrls": [
+        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196381_IMG_6488 (1).jpg",
+        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196388_IMG_6487 (1).jpg",
+        "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
+      ],
+      "defectPhotoUrls": [],
+      "createdAt": "2026-09-15T00:29:56.410Z",
+      "updatedAt": "2026-09-15T00:40:03.266Z",
+      "items": [
+        {
+          "itemName": "MCIXXF260504",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196381_IMG_6488 (1).jpg",
+            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196388_IMG_6487 (1).jpg",
+            "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ]
+    },
+    {
+      "id": "259f0cf0-4c57-4c4e-b72c-c8222689f8ca",
+      "inspectionNo": "퍼시스-시험26-08-00042",
+      "inspectionDate": "2026-08-21",
+      "vendor": "제일퍼니처",
+      "itemName": "FDDX2012001",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "result": "부적합",
+      "defectDetail": "5X15 보링 2개소 깊이 불량 ( 정 15 부 12)",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=P_dLhBTX4kHuLhjOJpT8cCCSqNRxQZucUq9X7Ci7EWw",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=bJ0j1vY6St8nRwKce9Cz3YLb13wzLw5_fKeQzJ4uH9U",
+      "remarks": "1.  날물 셋팅이상으로 인한 부적합 발생건\r\n2. 추가 입고검사 없이 양산전 해당부분 조치완료 사진 발송예정 (이장호 팀장)\r\n3. 입고 검사건은 수리하여 출고완료",
+      "photoUrls": [
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657675_IMG_6193.jpg",
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657679_IMG_6194.jpg",
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657682_IMG_6195.jpg",
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657702_IMG_6196.jpg"
+      ],
+      "defectPhotoUrls": [
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657707_IMG_6190.jpg",
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
+        "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
+      ],
+      "createdAt": "2026-08-22T07:27:37.716Z",
+      "updatedAt": "2026-08-24T04:22:36.003Z",
+      "items": [
+        {
+          "itemName": "FDDX2012001",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "부적합",
+          "defectDetail": "5X15 보링 2개소 깊이 불량 ( 정 15 부 12)",
+          "remarks": "",
+          "photoUrls": [
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657675_IMG_6193.jpg",
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657679_IMG_6194.jpg",
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657682_IMG_6195.jpg",
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657702_IMG_6196.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657707_IMG_6190.jpg",
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
+            "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ed864b65-2759-4c2d-901b-1cebcb10b887",
+      "inspectionNo": "퍼시스-시험26-08-00041",
+      "inspectionDate": "2026-08-18",
+      "vendor": "에픽",
+      "itemName": "XXXX2601246",
+      "color": "UA",
+      "lotNo": "",
+      "quantity": 1,
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "result": "적합",
+      "defectDetail": "",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=P_dLhBTX4kHuLhjOJpT8cF_3Ls0PRERtfqOLs4LNQ9U",
+      "remarks": "",
+      "photoUrls": [
+        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569331_IMG_6112.jpg",
+        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569337_IMG_6113.jpg",
+        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569362_IMG_6114.jpg",
+        "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
+      ],
+      "defectPhotoUrls": [],
+      "createdAt": "2026-08-18T07:52:49.391Z",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=bJ0j1vY6St8nRwKce9Cz3bmgCs7vNrHwtzhEfVZl04M",
+      "updatedAt": "2026-08-22T07:28:00.905Z",
+      "items": [
+        {
+          "itemName": "XXXX2601246",
+          "color": "UA",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569331_IMG_6112.jpg",
+            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569337_IMG_6113.jpg",
+            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569362_IMG_6114.jpg",
+            "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ]
     }
   ]
 }

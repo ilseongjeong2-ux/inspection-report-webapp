@@ -132,6 +132,10 @@ const READONLY_STYLE = `
   #registerModal,
   #scheduleRegisterModal { display: none !important; }
 
+  /* 목록 맨 오른쪽 '관리' 열은 등록/수정/삭제 전용이므로 열 자체를 숨긴다 */
+  #listView table th:last-child,
+  #listView table td:last-child { display: none !important; }
+
   .readonly-tag {
     display: inline-block; margin-left: 10px; padding: 4px 10px; border-radius: 999px;
     background: #eef1f7; color: #6b7280; font-size: 12px; font-weight: 700; vertical-align: middle;
@@ -220,15 +224,15 @@ function writeIfChanged(file, content) {
 }
 
 function main() {
-  // 공개 페이지는 검사일자 오름차순(오래된 것부터)으로 보여 준다.
-  // 날짜를 거슬러 등록해도 순서가 어긋나지 않도록 등록 순서가 아니라 날짜로 정렬한다.
+  // 공개 페이지는 문서번호 최신순(최근 것이 위)으로 보여 준다.
+  // 등록 순서가 아니라 문서번호로 정렬하므로 날짜를 거슬러 등록해도 자리가 어긋나지 않는다.
   const records = JSON.parse(fs.readFileSync(SRC_DB, 'utf-8'))
     .map(toPublicRecord)
     .sort((a, b) => {
-      const dateA = a.inspectionDate || '';
-      const dateB = b.inspectionDate || '';
-      if (dateA !== dateB) return dateA < dateB ? -1 : 1;
-      return (a.inspectionNo || '') < (b.inspectionNo || '') ? -1 : 1;
+      const noA = a.inspectionNo || '';
+      const noB = b.inspectionNo || '';
+      if (noA !== noB) return noA < noB ? 1 : -1;
+      return (a.inspectionDate || '') < (b.inspectionDate || '') ? 1 : -1;
     });
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
