@@ -86,6 +86,7 @@
   td.verdict.조건부적합 { background: var(--cond-bg); color: var(--cond); }
   td.criteria { white-space: pre-line; text-align: center; line-height: 1.6; }
   td.prelines { white-space: pre-line; text-align: center; line-height: 1.6; }
+  td.remark { font-weight: 700; color: var(--fail); }
   .result-line .picked { font-weight: 800; font-size: 15px; }
   .result-line .picked.적합 { color: var(--pass); }
   .result-line .picked.부적합 { color: var(--fail); }
@@ -292,7 +293,9 @@
   function multiLineRows(label, text) {
     const lines = (text || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean);
     const value = lines.join('\n');
-    return `<tr><th>${label}</th><td class="prelines${lines.length ? '' : ' no-content'}" colspan="3">${value}</td></tr>`;
+    // 비고는 눈에 띄도록 굵은 빨간 글씨로 표시한다.
+    const remarkClass = label.includes('비고') ? ' remark' : '';
+    return `<tr><th>${label}</th><td class="prelines${remarkClass}${lines.length ? '' : ' no-content'}" colspan="3">${value}</td></tr>`;
   }
 
   function reportItems(r) {
