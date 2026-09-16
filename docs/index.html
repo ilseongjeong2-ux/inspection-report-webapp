@@ -173,7 +173,8 @@
   .cell-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; }
   /* 품목이 여러 개인 줄은 내용이 길어지므로 글씨를 줄여 열 안에 들어가게 한다 */
   td.compact { font-size: 12px; }
-  td.stacked { line-height: 1.9; }
+  td.stacked { padding-top: 10px; padding-bottom: 10px; }
+  .stack-row { display: flex; align-items: center; justify-content: center; height: 28px; }
   td.compact .badge { font-size: 11.5px; padding: 4px 9px; }
   td.compact .cell-sub { font-size: 11px; }
 
@@ -472,7 +473,13 @@
   }
   // 품목이 여러 개면 한 칸 안에 줄바꿈해서 전부 보여 준다.
   function stackField(items, field) {
-    return items.map(it => escHtml(it[field] || '-')).join('<br>');
+    return items.map(it => `<div class="stack-row">${escHtml(it[field] || '-')}</div>`).join('');
+  }
+  // 검사결과도 품목마다 한 줄씩 보여 준다.
+  function stackResults(items) {
+    return items.map(it =>
+      `<div class="stack-row"><span class="badge ${it.result}">${escHtml(it.result)}</span></div>`
+    ).join('');
   }
   function itemsTooltip(items) {
     return items.map((it, i) => {
@@ -879,17 +886,12 @@
       const tooltip = escAttr(itemsTooltip(items));
       const quantityText = formatQuantity(items);
       const compact = items.length > 1 ? ' compact' : '';
-      const failCount = items.filter(it => it.result !== '적합').length;
       // 성적서 전체 비고 + 품목별 비고를 한 칸에 모아 보여 준다.
       const remarkLines = [];
       if (r.remarks) remarkLines.push(r.remarks);
       items.filter(it => it.remarks).forEach(it => {
         remarkLines.push(items.length > 1 ? `[${it.itemName}] ${it.remarks}` : it.remarks);
       });
-      const resultCell = items.length > 1
-        ? `<span class="badge ${r.result}">${r.result || ''}</span>
-           <div class="cell-sub">품목 ${items.length}건 중 ${failCount ? failCount + '건 불합격' : '전체 적합'}</div>`
-        : `<span class="badge ${r.result}">${r.result || ''}</span>`;
       tr.innerHTML = `
         <td title="${escAttr(r.inspectionNo)}">${escHtml(r.inspectionNo)}</td>
         <td class="center">${escHtml(r.inspectionDate)}</td>
@@ -898,7 +900,7 @@
         <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'color')}</td>
         <td class="num${compact}" title="${tooltip}">${quantityText}</td>
         <td class="center">${escHtml(r.inspector)}</td>
-        <td class="center${compact}">${resultCell}</td>
+        <td class="stacked${compact}">${stackResults(items)}</td>
         <td class="center">${thumb}</td>
         <td class="center">${reqLink}</td>
         <td class="wrap" title="${escAttr(remarkLines.join('\n'))}">${escHtml(remarkLines.join(' / '))}</td>
