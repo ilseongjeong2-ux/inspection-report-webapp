@@ -173,6 +173,7 @@
   .cell-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; }
   /* 품목이 여러 개인 줄은 내용이 길어지므로 글씨를 줄여 열 안에 들어가게 한다 */
   td.compact { font-size: 12px; }
+  td.stacked { line-height: 1.9; }
   td.compact .badge { font-size: 11.5px; padding: 4px 9px; }
   td.compact .cell-sub { font-size: 11px; }
 
@@ -449,6 +450,10 @@
   function summarizeField(items, field) {
     const first = items.length ? (items[0][field] || '') : '';
     return items.length > 1 ? `${first} 외 ${items.length - 1}건` : first;
+  }
+  // 품목이 여러 개면 한 칸 안에 줄바꿈해서 전부 보여 준다.
+  function stackField(items, field) {
+    return items.map(it => escHtml(it[field] || '-')).join('<br>');
   }
   function itemsTooltip(items) {
     return items.map((it, i) => {
@@ -865,8 +870,8 @@
         <td title="${escAttr(r.inspectionNo)}">${escHtml(r.inspectionNo)}</td>
         <td class="center">${escHtml(r.inspectionDate)}</td>
         <td title="${escAttr(r.vendor)}">${escHtml(r.vendor)}</td>
-        <td class="${compact}" title="${tooltip}">${escHtml(summarizeField(items, 'itemName'))}</td>
-        <td class="${compact}" title="${tooltip}">${escHtml(summarizeField(items, 'color'))}</td>
+        <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'itemName')}</td>
+        <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'color')}</td>
         <td class="num${compact}" title="${tooltip}">${quantityText}</td>
         <td class="center">${escHtml(r.inspector)}</td>
         <td class="center${compact}">${resultCell}</td>
