@@ -125,7 +125,7 @@
   td.num { font-variant-numeric: tabular-nums; }
   td.wrap { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; font-size: 14px; }
   /* 비고는 줄바꿈을 살려 전체를 보여 준다. 너무 길면 4줄까지만 보이고 '더보기'로 펼친다 */
-  td.remarks { max-width: 300px; text-align: left; font-size: 12.5px; line-height: 1.6; white-space: normal; }
+  td.remarks { max-width: 300px; text-align: left; font-size: 12.5px; font-weight: 700; line-height: 1.6; white-space: normal; }
   td.remarks .remark-text { white-space: pre-line; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   td.remarks.open .remark-text { -webkit-line-clamp: unset; }
   td.remarks .remark-more { display: none; }
@@ -872,12 +872,6 @@
       const tooltip = escAttr(itemsTooltip(items));
       const quantityText = formatQuantity(items);
       const compact = items.length > 1 ? ' compact' : '';
-      // 성적서 전체 비고 + 품목별 비고를 한 칸에 모아 보여 준다.
-      const remarkLines = [];
-      if (r.remarks) remarkLines.push(r.remarks);
-      items.filter(it => it.remarks).forEach(it => {
-        remarkLines.push(items.length > 1 ? `[${it.itemName}] ${it.remarks}` : it.remarks);
-      });
       tr.innerHTML = `
         <td title="${escAttr(r.inspectionNo)}">${escHtml(r.inspectionNo)}</td>
         <td class="center">${escHtml(r.inspectionDate)}</td>
@@ -890,7 +884,7 @@
         <td class="center">${thumb}</td>
         <td class="center">${reqLink}</td>
         <td class="remarks">
-          <div class="remark-text">${escHtml(remarkLines.join('\n'))}</div>
+          <div class="remark-text">${escHtml(r.remarks)}</div>
           <button type="button" class="remark-more" onclick="toggleRemark(this)">더보기</button>
         </td>
         <td class="center"><a class="req-link" href="report.html?id=${r.id}" target="_blank" rel="noopener">보기</a></td>
