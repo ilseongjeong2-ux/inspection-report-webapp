@@ -171,6 +171,10 @@
   .item-card-title { font-size: 13.5px; font-weight: 700; color: var(--primary-dark); }
   .item-defect-wrap, .item-defect-photo-wrap, .item-existing-wrap { display: none; }
   .cell-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; }
+  /* 품목이 여러 개인 줄은 내용이 길어지므로 글씨를 줄여 열 안에 들어가게 한다 */
+  td.compact { font-size: 12px; }
+  td.compact .badge { font-size: 11.5px; padding: 4px 9px; }
+  td.compact .cell-sub { font-size: 11px; }
 
   .lightbox-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 200; flex-direction: column; }
   .lightbox-overlay.open { display: flex; }
@@ -456,6 +460,14 @@
   function totalQuantity(items) {
     const numbers = items.map(it => it.quantity).filter(q => typeof q === 'number' && Number.isFinite(q));
     return numbers.length ? numbers.reduce((sum, n) => sum + n, 0) : null;
+  }
+  // 수량 표기. 품목이 여러 개면서 모두 1개씩이면 '각 1EA', 수량이 서로 다르면 합계를 보여 준다.
+  function formatQuantity(items) {
+    const numbers = items.map(it => it.quantity).filter(q => typeof q === 'number' && Number.isFinite(q));
+    if (!numbers.length) return '';
+    if (items.length === 1) return numbers[0] + 'EA';
+    if (numbers.length === items.length && numbers.every(n => n === 1)) return '각 1EA';
+    return '총 ' + numbers.reduce((sum, n) => sum + n, 0) + 'EA';
   }
 
   const DEFAULT_INSPECTION_ITEM = '외관 및 치수';
@@ -836,7 +848,8 @@
         ? `<a class="req-link" href="${r.reportDocUrl}" target="_blank" rel="noopener">보기</a>`
         : '-';
       const tooltip = escAttr(itemsTooltip(items));
-      const quantity = totalQuantity(items);
+      const quantityText = formatQuantity(items);
+      const compact = items.length > 1 ? ' compact' : '';
       const failCount = items.filter(it => it.result !== '적합').length;
       // 성적서 전체 비고 + 품목별 비고를 한 칸에 모아 보여 준다.
       const remarkLines = [];
@@ -852,11 +865,11 @@
         <td title="${escAttr(r.inspectionNo)}">${escHtml(r.inspectionNo)}</td>
         <td class="center">${escHtml(r.inspectionDate)}</td>
         <td title="${escAttr(r.vendor)}">${escHtml(r.vendor)}</td>
-        <td title="${tooltip}">${escHtml(summarizeField(items, 'itemName'))}</td>
-        <td title="${tooltip}">${escHtml(summarizeField(items, 'color'))}</td>
-        <td class="num" title="${tooltip}">${quantity != null ? quantity : ''}</td>
+        <td class="${compact}" title="${tooltip}">${escHtml(summarizeField(items, 'itemName'))}</td>
+        <td class="${compact}" title="${tooltip}">${escHtml(summarizeField(items, 'color'))}</td>
+        <td class="num${compact}" title="${tooltip}">${quantityText}</td>
         <td class="center">${escHtml(r.inspector)}</td>
-        <td class="center">${resultCell}</td>
+        <td class="center${compact}">${resultCell}</td>
         <td class="center">${thumb}</td>
         <td class="center">${reqLink}</td>
         <td class="wrap" title="${escAttr(remarkLines.join('\n'))}">${escHtml(remarkLines.join(' / '))}</td>
