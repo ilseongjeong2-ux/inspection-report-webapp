@@ -227,10 +227,11 @@ function main() {
   const records = JSON.parse(fs.readFileSync(SRC_DB, 'utf-8'))
     .map(toPublicRecord)
     .sort((a, b) => {
-      const noA = a.inspectionNo || '';
-      const noB = b.inspectionNo || '';
-      if (noA !== noB) return noA < noB ? 1 : -1;
-      return (a.inspectionDate || '') < (b.inspectionDate || '') ? 1 : -1;
+      // 검사일자 최신순. 같은 날이면 문서번호가 큰 것을 위로 둔다. (사내 대시보드와 같은 순서)
+      const dateA = a.inspectionDate || '';
+      const dateB = b.inspectionDate || '';
+      if (dateA !== dateB) return dateA < dateB ? 1 : -1;
+      return (a.inspectionNo || '') < (b.inspectionNo || '') ? 1 : -1;
     });
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
