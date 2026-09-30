@@ -161,16 +161,16 @@
 
   .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.5); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; }
   .modal-overlay.open { display: flex; }
-  .modal { background: var(--card-bg); border-radius: 16px; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 28px 30px; box-shadow: 0 20px 60px rgba(15,23,42,0.25); }
+  /* 위쪽 여백은 고정된 제목줄이 직접 갖는다. (모달에 top padding 을 주면 제목이 그만큼 내려가 그 틈으로 내용이 비친다) */
+  .modal { background: var(--card-bg); border-radius: 16px; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 0 30px 28px; box-shadow: 0 20px 60px rgba(15,23,42,0.25); }
   .modal h2 {
     font-size: 20px; font-weight: 700;
     border-bottom: 1px solid var(--border);
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
     /* 스크롤을 내려도 제목과 닫기 버튼이 맨 위에 붙어 있게 한다.
-       모달 안쪽 여백(28px 30px)만큼 밖으로 빼내고 같은 크기를 제목에 채워 넣어야
-       스크롤된 내용이 제목 옆이나 위로 비쳐 보이지 않는다. */
+       좌우로만 모달 여백만큼 넓혀 배경이 끝까지 덮이게 하고, 위쪽 여백은 제목이 직접 갖는다. */
     position: sticky; top: 0; z-index: 2; background: var(--card-bg);
-    margin: -28px -30px 20px; padding: 28px 30px 16px;
+    margin: 0 -30px 20px; padding: 28px 30px 16px;
   }
   .modal-close {
     flex-shrink: 0; background: none; border: none; padding: 0 2px; cursor: pointer;
