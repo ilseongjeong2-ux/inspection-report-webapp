@@ -185,6 +185,13 @@
   td.compact { font-size: 12px; }
   td.stacked { padding-top: 10px; padding-bottom: 10px; }
   .stack-row { display: flex; align-items: center; justify-content: center; height: 28px; }
+  /* 품목이 많은 줄은 앞의 3개만 보이고 나머지는 '더보기'로 펼친다 */
+  tr.collapsed td.stacked .stack-row:nth-child(n+4) { display: none; }
+  .item-toggle {
+    background: none; border: none; padding: 0; margin-top: 4px; cursor: pointer;
+    font-family: inherit; font-size: 11.5px; font-weight: 600; color: var(--primary);
+  }
+  .item-toggle:hover { text-decoration: underline; }
   td.compact .badge { font-size: 11.5px; padding: 4px 9px; }
   td.compact .cell-sub { font-size: 11px; }
 
@@ -872,11 +879,17 @@
       const tooltip = escAttr(itemsTooltip(items));
       const quantityText = formatQuantity(items);
       const compact = items.length > 1 ? ' compact' : '';
+      // 품목이 많으면 앞의 몇 개만 보여 주고 나머지는 접어 둔다.
+      const hiddenCount = items.length - ITEM_PREVIEW_COUNT;
+      const itemToggle = hiddenCount > 0
+        ? `<button type="button" class="item-toggle" data-rest="${hiddenCount}" onclick="toggleItems(this)">+ ${hiddenCount}건 더보기</button>`
+        : '';
+      if (hiddenCount > 0) tr.classList.add('collapsed');
       tr.innerHTML = `
         <td title="${escAttr(r.inspectionNo)}">${escHtml(r.inspectionNo)}</td>
         <td class="center">${escHtml(r.inspectionDate)}</td>
         <td title="${escAttr(r.vendor)}">${escHtml(r.vendor)}</td>
-        <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'itemName')}</td>
+        <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'itemName')}${itemToggle}</td>
         <td class="stacked${compact}" title="${tooltip}">${stackField(items, 'color')}</td>
         <td class="num${compact}" title="${tooltip}">${quantityText}</td>
         <td class="center">${escHtml(r.inspector)}</td>
@@ -900,6 +913,15 @@
       body.appendChild(tr);
     });
     markOverflowingRemarks();
+  }
+
+  // 품목이 이 개수를 넘으면 목록에서 접어 둔다.
+  const ITEM_PREVIEW_COUNT = 3;
+
+  function toggleItems(button) {
+    const row = button.closest('tr');
+    const collapsed = row.classList.toggle('collapsed');
+    button.textContent = collapsed ? `+ ${button.dataset.rest}건 더보기` : '접기';
   }
 
   // 실제로 글이 잘린 칸에만 '더보기'를 띄운다.
