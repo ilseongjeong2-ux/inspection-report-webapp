@@ -180,6 +180,14 @@
   .item-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
   .item-card-title { font-size: 13.5px; font-weight: 700; color: var(--primary-dark); }
   .item-defect-wrap, .item-defect-photo-wrap, .item-existing-wrap { display: none; }
+  /* 품목 카드가 많아 스크롤을 내려도 바로 추가할 수 있도록 목록 아래에도 버튼을 둔다 */
+  .btn-add-item {
+    width: 100%; padding: 13px; margin-bottom: 6px;
+    border: 1px dashed var(--border-strong); border-radius: var(--radius-md);
+    background: #fff; color: var(--primary);
+    font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  }
+  .btn-add-item:hover { background: var(--primary-wash); border-color: var(--primary); }
   .cell-sub { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; }
   /* 품목이 여러 개인 줄은 내용이 길어지므로 글씨를 줄여 열 안에 들어가게 한다 */
   td.compact { font-size: 12px; }
@@ -350,6 +358,7 @@
         <button type="button" class="btn btn-secondary btn-sm" onclick="addItemCard()">+ 품목 추가</button>
       </div>
       <div id="itemsWrap"></div>
+      <button type="button" class="btn-add-item" onclick="addItemCard()">+ 품목 추가</button>
 
       <div class="form-grid">
         <div class="form-item full">
@@ -1237,6 +1246,11 @@
     renderItemPhotos(card, state);
     toggleItemDefect(uid);
     renumberItemCards();
+    // 버튼으로 새로 추가한 경우에는 그 카드가 보이도록 옮겨 주고 품목명 칸에 커서를 둔다.
+    if (!data && itemStates.length > 1) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      card.querySelector('.it-name').focus({ preventScroll: true });
+    }
     return card;
   }
 
@@ -1289,20 +1303,41 @@
       state.keepDefectPhotos = state.keepDefectPhotos.filter(u => u !== url);
       renderItemPhotos(card, state);
     });
-    const newPreview = card.querySelector('.it-photo-preview');
-    newPreview.innerHTML = '';
-    state.files.forEach(file => {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      newPreview.appendChild(img);
+    renderPickedFiles(card.querySelector('.it-photo-preview'), state.files, index => {
+      state.files.splice(index, 1);
+      syncFileInput(card.querySelector('.it-photos'), state.files);
+      renderItemPhotos(card, state);
     });
-    const newDefectPreview = card.querySelector('.it-defect-preview');
-    newDefectPreview.innerHTML = '';
-    state.defectFiles.forEach(file => {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      newDefectPreview.appendChild(img);
+    renderPickedFiles(card.querySelector('.it-defect-preview'), state.defectFiles, index => {
+      state.defectFiles.splice(index, 1);
+      syncFileInput(card.querySelector('.it-defect-photos'), state.defectFiles);
+      renderItemPhotos(card, state);
     });
+  }
+
+  // 방금 고른 사진도 저장 전에 한 장씩 뺄 수 있게 x 버튼을 붙인다.
+  function renderPickedFiles(container, files, onRemove) {
+    container.innerHTML = '';
+    files.forEach((file, index) => {
+      const item = document.createElement('div');
+      item.className = 'photo-item';
+      item.innerHTML = `<img /><button type="button" class="photo-remove" title="제거">&times;</button>`;
+      item.querySelector('img').src = URL.createObjectURL(file);
+      item.querySelector('img').title = file.name;
+      item.querySelector('.photo-remove').onclick = () => onRemove(index);
+      container.appendChild(item);
+    });
+  }
+
+  // 파일 선택칸에 표시되는 개수도 함께 맞춘다.
+  function syncFileInput(input, files) {
+    try {
+      const transfer = new DataTransfer();
+      files.forEach(file => transfer.items.add(file));
+      input.files = transfer.files;
+    } catch {
+      /* 브라우저가 지원하지 않으면 표시만 어긋나고 저장에는 영향 없다 */
+    }
   }
 
   // 화면에 그려진 순서대로 품목 값을 모은다. 사진 파일은 상태에서 가져온다.
