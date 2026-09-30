@@ -1,6 +1,530 @@
 {
-  "exportedAt": "2026-09-16T00:09:48.771Z",
+  "exportedAt": "2026-09-30T05:44:30.972Z",
   "records": [
+    {
+      "id": "76555200-4dff-4cfc-a9b9-36527a27dc57",
+      "inspectionNo": "퍼시스-시험26-09-00050",
+      "inspectionDate": "2026-09-30",
+      "vendor": "미래NC",
+      "items": [
+        {
+          "itemName": "FND0714",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467203_8wego_FND0714 (4).jpg",
+            "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467206_byhz8_FND0714 (2).jpg",
+            "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467208_msjpz_FND0714 (3).jpg",
+            "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUa9A_ta4lmhP8TAPtciQ7Zk",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-09-30T05:17:47.211Z",
+      "itemName": "FND0714",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "photoUrls": [
+        "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467203_8wego_FND0714 (4).jpg",
+        "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467206_byhz8_FND0714 (2).jpg",
+        "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467208_msjpz_FND0714 (3).jpg",
+        "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-09-30T05:17:57.096Z"
+    },
+    {
+      "id": "d3b08bc6-93fa-44b4-be0d-fc664fa6d3df",
+      "inspectionNo": "퍼시스-시험26-09-00049",
+      "inspectionDate": "2026-09-30",
+      "vendor": "제일 퍼니처",
+      "items": [
+        {
+          "itemName": "MCICA0260011",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "부적합",
+          "defectDetail": "1. 윗판 - 평엣지면 이바리 다수\n2. 외관 세척불량",
+          "remarks": "",
+          "photoUrls": [
+            "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366912_lpxxs_MCICA0260011 (4).jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366914_cww6f_MCICA0260011.jpg",
+            "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
+            "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
+          ]
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=4U1tfCXnioqe0YlFxxMeTeDaMuR_GY36_Q97ZgsJUX0",
+      "reportDocUrl": "",
+      "remarks": "1. 9/30 업체 내용전달 완료\r\n2. 재검사 예정 ( 일정 공유예정)",
+      "createdAt": "2026-09-30T05:16:06.921Z",
+      "itemName": "MCICA0260011",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "부적합",
+      "defectDetail": "1. 윗판 - 평엣지면 이바리 다수\n2. 외관 세척불량",
+      "photoUrls": [
+        "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366912_lpxxs_MCICA0260011 (4).jpg"
+      ],
+      "defectPhotoUrls": [
+        "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366914_cww6f_MCICA0260011.jpg",
+        "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
+        "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
+      ],
+      "updatedAt": "2026-09-30T05:16:13.119Z"
+    },
+    {
+      "id": "823170da-2b9a-490a-a922-950aff38dfb8",
+      "inspectionNo": "퍼시스-시험26-09-00048",
+      "inspectionDate": "2026-09-23",
+      "vendor": "올품 퍼니처",
+      "items": [
+        {
+          "itemName": "DSBC0082H",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "부적합",
+          "defectDetail": "1. 윗선반 - 원자재 돌출\n2. 밑선반 - 긁힘 스크래치",
+          "remarks": "",
+          "photoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094537_m7qdm_DSBC0082H (ì¬) (2).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094544_rhec9_DSBC0082H (ì¬).jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094548_onh61_DSBC0082H (ì¬) (3).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094558_c3x4f_DSBC0082H (ì¬)(4).jpg"
+          ]
+        },
+        {
+          "itemName": "ICD40CP01A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094565_yyql4_ICD40CP01A (ì¬) (2).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094574_jzi3c_ICD40CP01A (ì¬) (3).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094580_y2s3x_ICD40CP01A (ì¬).jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "ICD60CP01A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094591_lcnnc_ICD60CP01A (ì¬) (2).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094598_y8l0m_ICD60CP01A (ì¬) (3).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094604_6thyp_ICD60CP01A (ì¬).jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "IHS12CP06A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "부적합",
+          "defectDetail": "1. 고정선반B - 전체치수 불량 ( Y 정60 , 부59)\n2. 밑판 - 보링깊이 불량 ( 정 13*10 , 부 13*9.4 )\n3. 보수제 흔적",
+          "remarks": "",
+          "photoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094609_rjk97_IHS12CP06A (ì¬).jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094613_ihxyp_IHS12CP06A (ì¬) (2).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094622_fh6vh_IHS12CP06A (ì¬) (3).jpg"
+          ]
+        },
+        {
+          "itemName": "IHV00CP00A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "부적합",
+          "defectDetail": "1. 중측판 - 긁힘 스크래치\n2. 측판L - 눌림 스크래치",
+          "remarks": "",
+          "photoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094627_btrwb_IHV00CP00A (ì¬) (2).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094629_9cshe_IHV00CP00A (ì¬).jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
+            "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
+          ]
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUZGw5LHg1BrEMxT0ipTQx6A",
+      "reportDocUrl": "",
+      "remarks": "1. 9/24 업체 내방하여 부적합 설명 및 조치요청 후 전량 반품완료",
+      "createdAt": "2026-09-30T05:11:34.646Z",
+      "itemName": "DSBC0082H",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "부적합",
+      "defectDetail": "[DSBC0082H] 1. 윗선반 - 원자재 돌출\n2. 밑선반 - 긁힘 스크래치\n[IHS12CP06A] 1. 고정선반B - 전체치수 불량 ( Y 정60 , 부59)\n2. 밑판 - 보링깊이 불량 ( 정 13*10 , 부 13*9.4 )\n3. 보수제 흔적\n[IHV00CP00A] 1. 중측판 - 긁힘 스크래치\n2. 측판L - 눌림 스크래치",
+      "photoUrls": [
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094537_m7qdm_DSBC0082H (ì¬) (2).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094544_rhec9_DSBC0082H (ì¬).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094565_yyql4_ICD40CP01A (ì¬) (2).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094574_jzi3c_ICD40CP01A (ì¬) (3).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094580_y2s3x_ICD40CP01A (ì¬).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094591_lcnnc_ICD60CP01A (ì¬) (2).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094598_y8l0m_ICD60CP01A (ì¬) (3).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094604_6thyp_ICD60CP01A (ì¬).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094609_rjk97_IHS12CP06A (ì¬).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094627_btrwb_IHV00CP00A (ì¬) (2).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094629_9cshe_IHV00CP00A (ì¬).jpg"
+      ],
+      "defectPhotoUrls": [
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094548_onh61_DSBC0082H (ì¬) (3).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094558_c3x4f_DSBC0082H (ì¬)(4).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094613_ihxyp_IHS12CP06A (ì¬) (2).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094622_fh6vh_IHS12CP06A (ì¬) (3).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
+        "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
+      ]
+    },
+    {
+      "id": "8634d86d-eda0-4901-a676-025b3095fba0",
+      "inspectionNo": "퍼시스-시험26-09-00047",
+      "inspectionDate": "2026-09-28",
+      "vendor": "에픽",
+      "items": [
+        {
+          "itemName": "CCR2014ECA",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156288_dgwy8_CCR2014ECA (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156294_wyjaq_CCR2014ECA (3).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156298_qxxd6_CCR2014ECA.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "GDN0016O",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156301_kxxbz_GDN0016O (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156312_0dmly_GDN0016O (3).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156314_fa4qj_GDN0016O.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "HBA40F11PHLN",
+          "color": "SP",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156316_gnvfo_HBA40F11PHLN (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156326_lgpkz_HBA40F11PHLN.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "HBA40F11PHLN",
+          "color": "NCC",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156329_hps8d_HBA40F11PHLN NSS (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156333_ectmc_HBA40F11PHLN NSS.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "HSOC0145DBR",
+          "color": "SP",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156346_8fv57_HSIC0145DBR (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156349_ok9fj_HSIC0145DBR.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "ICB20DD00A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156357_ztr2j_ICB20DD00A (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156360_wkmn7_ICB20DD00A (3).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156363_3mx3d_ICB20DD00A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "IVN60CP00A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156372_nigby_IVN60CP00A (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156388_8n00w_IVN60CP00A (3).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156396_5ifs7_IVN60CP00A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "HBA40F15PHLN",
+          "color": "SP",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221731_mzut1_HBA40F15PHLN (2).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221734_zxw6f_HBA40F15PHLN (3).jpg",
+            "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUR0SflCIW9LrSlCLHVnyunA",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-09-30T04:55:56.409Z",
+      "itemName": "CCR2014ECA",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "photoUrls": [
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156288_dgwy8_CCR2014ECA (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156294_wyjaq_CCR2014ECA (3).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156298_qxxd6_CCR2014ECA.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156301_kxxbz_GDN0016O (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156312_0dmly_GDN0016O (3).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156314_fa4qj_GDN0016O.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156316_gnvfo_HBA40F11PHLN (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156326_lgpkz_HBA40F11PHLN.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156329_hps8d_HBA40F11PHLN NSS (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156333_ectmc_HBA40F11PHLN NSS.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156346_8fv57_HSIC0145DBR (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156349_ok9fj_HSIC0145DBR.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156357_ztr2j_ICB20DD00A (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156360_wkmn7_ICB20DD00A (3).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156363_3mx3d_ICB20DD00A.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156372_nigby_IVN60CP00A (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156388_8n00w_IVN60CP00A (3).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156396_5ifs7_IVN60CP00A.jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221731_mzut1_HBA40F15PHLN (2).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221734_zxw6f_HBA40F15PHLN (3).jpg",
+        "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-09-30T04:57:01.738Z"
+    },
+    {
+      "id": "50da21aa-ba97-44ad-a6b0-e91070cbc183",
+      "inspectionNo": "퍼시스-시험26-09-00046",
+      "inspectionDate": "2026-09-21",
+      "vendor": "에픽",
+      "items": [
+        {
+          "itemName": "DSCCAV20061",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688320_28aic_DSCCAV20061.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "HYC9092V",
+          "color": "GYC",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688325_esjx5_HYC9092V (2).jpg",
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688357_nragr_HYC9092V.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "ICS14DD00A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688361_x0cjo_ICS14DD00A (2).jpg",
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688367_90h9a_ICS14DD00A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "ICV14DD01A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688371_ng5bb_ICS14DD00A.jpg"
+          ],
+          "defectPhotoUrls": []
+        },
+        {
+          "itemName": "IVN14CP05A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688375_3bxdw_IVN14CP00A.jpg",
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688379_9s1ld_IVN14CP05A (2).jpg",
+            "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
+          ],
+          "defectPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUYqINpEWSMiNMGx06a8Tc8Q",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-09-30T04:48:08.393Z",
+      "itemName": "DSCCAV20061",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "photoUrls": [
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688320_28aic_DSCCAV20061.jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688325_esjx5_HYC9092V (2).jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688357_nragr_HYC9092V.jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688361_x0cjo_ICS14DD00A (2).jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688367_90h9a_ICS14DD00A.jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688371_ng5bb_ICS14DD00A.jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688375_3bxdw_IVN14CP00A.jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688379_9s1ld_IVN14CP05A (2).jpg",
+        "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
+      ],
+      "defectPhotoUrls": []
+    },
+    {
+      "id": "5fb771f1-5616-40fe-937b-a5d91e9e70bd",
+      "inspectionNo": "퍼시스-시험26-09-00045",
+      "inspectionDate": "2026-09-19",
+      "vendor": "미래NC",
+      "items": [
+        {
+          "itemName": "MCIFND260068",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241657_4nbzu_IMG_6803.jpg",
+            "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241662_njb60_IMG_6799.jpg",
+            "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241664_6fyfl_IMG_6804.jpg",
+            "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790746828010_a8lqe_ì¤í¬ë¦°ì· 2026-09-30 143957.png"
+          ],
+          "defectPhotoUrls": []
+        }
+      ],
+      "inspector": "배훈기",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUbSB_rGnkGx9sgE32i-FWgU",
+      "reportDocUrl": "",
+      "remarks": "1. 하단 우레탄 접착부 루타 따내기 부적합 ( 정 10 / 부 5 )\r\n2. 가공불량건 재입고(18일오후) 후 확인완료",
+      "createdAt": "2026-09-22T00:50:41.667Z",
+      "itemName": "MCIFND260068",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "photoUrls": [
+        "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241657_4nbzu_IMG_6803.jpg",
+        "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241662_njb60_IMG_6799.jpg",
+        "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241664_6fyfl_IMG_6804.jpg",
+        "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790746828010_a8lqe_ì¤í¬ë¦°ì· 2026-09-30 143957.png"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-09-30T05:40:28.013Z"
+    },
     {
       "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
       "inspectionNo": "퍼시스-시험26-09-00044",
