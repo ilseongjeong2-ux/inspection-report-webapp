@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-30T05:56:23.293Z",
+  "exportedAt": "2026-09-30T06:20:51.563Z",
   "records": [
     {
       "id": "76555200-4dff-4cfc-a9b9-36527a27dc57",
@@ -28,7 +28,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUa9A_ta4lmhP8TAPtciQ7Zk",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjnxqI9fwxHaD1n2Cu7TffSw",
       "remarks": "",
       "createdAt": "2026-09-30T05:17:47.211Z",
       "itemName": "FND0714",
@@ -44,7 +44,7 @@
         "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T05:17:57.096Z"
+      "updatedAt": "2026-09-30T06:20:44.175Z"
     },
     {
       "id": "d3b08bc6-93fa-44b4-be0d-fc664fa6d3df",
@@ -74,7 +74,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=4U1tfCXnioqe0YlFxxMeTeDaMuR_GY36_Q97ZgsJUX0",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjsnrGH02XsbeGi77iW69HU4",
       "remarks": "1. 9/30 업체 내용전달 완료\r\n2. 재검사 예정 ( 일정 공유예정)",
       "createdAt": "2026-09-30T05:16:06.921Z",
       "itemName": "MCICA0260011",
@@ -91,7 +91,7 @@
         "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
         "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
       ],
-      "updatedAt": "2026-09-30T05:16:13.119Z"
+      "updatedAt": "2026-09-30T06:20:36.389Z"
     },
     {
       "id": "8634d86d-eda0-4901-a676-025b3095fba0",
@@ -221,7 +221,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUR0SflCIW9LrSlCLHVnyunA",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjhfQYAUtkxj6QNj3t81OzJQ",
       "remarks": "",
       "createdAt": "2026-09-30T04:55:56.409Z",
       "itemName": "CCR2014ECA",
@@ -254,7 +254,7 @@
         "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T04:57:01.738Z"
+      "updatedAt": "2026-09-30T06:20:22.563Z"
     },
     {
       "id": "823170da-2b9a-490a-a922-950aff38dfb8",
@@ -347,7 +347,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUZGw5LHg1BrEMxT0ipTQx6A",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjpkV_4-PUJJNYHhYbCgiOeM",
       "remarks": "1. 9/24 업체 내방하여 부적합 설명 및 조치요청 후 전량 반품완료",
       "createdAt": "2026-09-30T05:11:34.646Z",
       "itemName": "DSBC0082H",
@@ -376,7 +376,8 @@
         "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094622_fh6vh_IHS12CP06A (ì¬) (3).jpg",
         "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
         "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
-      ]
+      ],
+      "updatedAt": "2026-09-30T06:20:14.153Z"
     },
     {
       "id": "50da21aa-ba97-44ad-a6b0-e91070cbc183",
@@ -458,7 +459,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUYqINpEWSMiNMGx06a8Tc8Q",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjo2GnOOYZM5bAm4paHV76Lo",
       "remarks": "",
       "createdAt": "2026-09-30T04:48:08.393Z",
       "itemName": "DSCCAV20061",
@@ -479,7 +480,7 @@
         "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T05:49:25.282Z"
+      "updatedAt": "2026-09-30T06:20:02.957Z"
     },
     {
       "id": "5fb771f1-5616-40fe-937b-a5d91e9e70bd",
