@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-09-30T06:20:51.563Z",
+  "exportedAt": "2026-10-13T07:01:16.126Z",
   "records": [
     {
       "id": "76555200-4dff-4cfc-a9b9-36527a27dc57",
@@ -44,7 +44,8 @@
         "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T06:20:44.175Z"
+      "updatedAt": "2026-09-30T06:20:44.175Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "d3b08bc6-93fa-44b4-be0d-fc664fa6d3df",
@@ -91,7 +92,8 @@
         "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
         "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
       ],
-      "updatedAt": "2026-09-30T06:20:36.389Z"
+      "updatedAt": "2026-09-30T06:20:36.389Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "8634d86d-eda0-4901-a676-025b3095fba0",
@@ -254,7 +256,8 @@
         "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T06:20:22.563Z"
+      "updatedAt": "2026-09-30T06:20:22.563Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "823170da-2b9a-490a-a922-950aff38dfb8",
@@ -377,7 +380,8 @@
         "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
         "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
       ],
-      "updatedAt": "2026-09-30T06:20:14.153Z"
+      "updatedAt": "2026-09-30T06:20:14.153Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "50da21aa-ba97-44ad-a6b0-e91070cbc183",
@@ -480,7 +484,8 @@
         "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T06:20:02.957Z"
+      "updatedAt": "2026-09-30T06:20:02.957Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "5fb771f1-5616-40fe-937b-a5d91e9e70bd",
@@ -525,7 +530,8 @@
         "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790746828010_a8lqe_ì¤í¬ë¦°ì· 2026-09-30 143957.png"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T05:40:28.013Z"
+      "updatedAt": "2026-09-30T05:40:28.013Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "4dc5f4e1-f376-4727-88bf-6ebdd949d77e",
@@ -612,7 +618,8 @@
         "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-16T00:09:23.991Z"
+      "updatedAt": "2026-09-16T00:09:23.991Z",
+      "specialPhotoUrls": []
     },
     {
       "id": "96d39668-5d50-4a5a-b2b4-1bffc4038f2d",
@@ -655,7 +662,8 @@
           ],
           "defectPhotoUrls": []
         }
-      ]
+      ],
+      "specialPhotoUrls": []
     },
     {
       "id": "259f0cf0-4c57-4c4e-b72c-c8222689f8ca",
@@ -708,7 +716,8 @@
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
           ]
         }
-      ]
+      ],
+      "specialPhotoUrls": []
     },
     {
       "id": "ed864b65-2759-4c2d-901b-1cebcb10b887",
@@ -753,7 +762,8 @@
           ],
           "defectPhotoUrls": []
         }
-      ]
+      ],
+      "specialPhotoUrls": []
     }
   ]
 }

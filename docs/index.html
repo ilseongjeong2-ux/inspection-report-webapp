@@ -405,6 +405,12 @@
           <label>비고 (성적서 전체)</label>
           <textarea id="iRemarks" rows="2" placeholder="품목별 비고는 각 품목 카드 안에 적습니다"></textarea>
         </div>
+        <div class="form-item full">
+          <label>특이사항 사진 (여러 장 선택 가능)</label>
+          <div class="file-preview" id="specialExistingPreview"></div>
+          <input type="file" id="iSpecialPhotos" accept="image/*" multiple />
+          <div class="file-preview" id="specialFilePreview"></div>
+        </div>
       </div>
       <div class="status-msg info" id="registerStatus"></div>
       <div class="modal-actions">
@@ -487,6 +493,32 @@
   // 품목 카드 하나당 상태(유지할 기존 사진 목록 + 새로 고른 파일)를 순서대로 담아 둔다.
   let itemStates = [];
   let itemUidSeq = 0;
+  // 특이사항 사진은 품목이 아니라 성적서 전체에 붙으므로 따로 담는다.
+  let specialPhotoState = { keep: [], files: [] };
+
+  function renderSpecialPhotos() {
+    renderThumbList(document.getElementById('specialExistingPreview'), specialPhotoState.keep, url => {
+      specialPhotoState.keep = specialPhotoState.keep.filter(u => u !== url);
+      renderSpecialPhotos();
+    });
+    renderPickedFiles(document.getElementById('specialFilePreview'), specialPhotoState.files, index => {
+      specialPhotoState.files.splice(index, 1);
+      syncFileInput(document.getElementById('iSpecialPhotos'), specialPhotoState.files);
+      renderSpecialPhotos();
+    });
+  }
+
+  function resetSpecialPhotos(urls) {
+    specialPhotoState = { keep: [...(urls || [])], files: [] };
+    const input = document.getElementById('iSpecialPhotos');
+    if (input) input.value = '';
+    renderSpecialPhotos();
+  }
+
+  document.getElementById('iSpecialPhotos').addEventListener('change', event => {
+    specialPhotoState.files = Array.from(event.target.files);
+    renderSpecialPhotos();
+  });
 
   function escHtml(value) {
     return String(value == null ? '' : value)
@@ -1131,6 +1163,7 @@
     document.getElementById('registerForm').reset();
     resetItemCards();
     addItemCard();
+    resetSpecialPhotos([]);
     document.getElementById('iDate').value = new Date().toISOString().slice(0, 10);
     document.getElementById('iInspectionItem').value = DEFAULT_INSPECTION_ITEM;
     document.getElementById('iCriteria').value = DEFAULT_CRITERIA;
@@ -1156,6 +1189,7 @@
     document.getElementById('iRequestDocUrl').value = r.requestDocUrl || '';
     document.getElementById('iReportDocUrl').value = r.reportDocUrl || '';
     document.getElementById('iRemarks').value = r.remarks || '';
+    resetSpecialPhotos(r.specialPhotoUrls);
     document.getElementById('registerStatus').textContent = '';
     document.getElementById('registerModalTitle').textContent = '검사성적서 수정';
     document.getElementById('submitBtn').textContent = '수정 저장';
@@ -1465,6 +1499,8 @@
       formData.append('reportDocUrl', document.getElementById('iReportDocUrl').value.trim());
       formData.append('remarks', document.getElementById('iRemarks').value.trim());
       formData.append('items', JSON.stringify(entries.map(entry => entry.values)));
+      formData.append('keepSpecialPhotos', JSON.stringify(specialPhotoState.keep));
+      specialPhotoState.files.forEach(file => formData.append('specialPhotos', file));
       // 사진은 품목 순서에 맞춰 photos_0, photos_1 ... 이름으로 올린다.
       entries.forEach((entry, index) => {
         entry.state.files.forEach(file => formData.append(`photos_${index}`, file));

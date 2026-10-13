@@ -338,6 +338,14 @@
   }
 
   // 품목이 1개일 때: 기존 성적서 양식을 그대로 유지한다.
+  // 특이사항 사진은 품목이 아니라 성적서 전체에 붙는다.
+  function specialPhotoRow(r) {
+    const photos = r.specialPhotoUrls || [];
+    return photos.length
+      ? `<tr><th>특이사항 사진</th><td class="photo-cell" colspan="3">${photoGrid(photos, 'special')}</td></tr>`
+      : '';
+  }
+
   function singleItemSheet(r, item) {
     const itemColor = [item.itemName || '', item.color || ''].filter(Boolean).join(' / ');
     const defectPhotos = item.defectPhotoUrls || [];
@@ -372,6 +380,7 @@
         </tr>
         ${defectPhotoRow}
         ${item.remarks ? multiLineRows('품목 비고', item.remarks) : ''}
+        ${specialPhotoRow(r)}
         ${multiLineRows('비고', r.remarks)}
       </table>
       <div class="logo"><img src="fursys-logo.png" alt="FURSYS" /></div>
@@ -450,6 +459,7 @@
 
       <div class="section-gap"></div>
       <table class="cert">${CERT_COLGROUP}
+        ${specialPhotoRow(r)}
         ${multiLineRows('비고', r.remarks)}
       </table>
       <div class="logo"><img src="fursys-logo.png" alt="FURSYS" /></div>

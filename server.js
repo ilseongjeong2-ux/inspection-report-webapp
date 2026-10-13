@@ -60,7 +60,9 @@ function withDerivedFields(record) {
     quantity: first.quantity != null ? first.quantity : null,
     result: overallResult(items),
     defectDetail,
-    photoUrls: items.flatMap(it => it.photoUrls || []),
+    // 특이사항 사진은 품목이 아니라 성적서 전체에 붙는다.
+    specialPhotoUrls: record.specialPhotoUrls || [],
+    photoUrls: [...items.flatMap(it => it.photoUrls || []), ...(record.specialPhotoUrls || [])],
     defectPhotoUrls: items.flatMap(it => it.defectPhotoUrls || [])
   };
 }
@@ -260,12 +262,14 @@ app.post('/api/inspections', (req, res, next) => {
 }, uploadAny, (req, res) => {
   try {
     const b = req.body;
-    const items = buildItems(b, groupUploadedFiles(req));
+    const filesByField = groupUploadedFiles(req);
+    const items = buildItems(b, filesByField);
     if (!b.inspectionDate || !b.vendor || !items.length) {
       return res.status(400).json({ error: '검사일자/업체명/품목명은 필수입니다.' });
     }
     const record = withDerivedFields({
       id: req.recordId,
+      specialPhotoUrls: filesByField.specialPhotos || [],
       inspectionNo: generateDocNo(b.inspectionDate),
       inspectionDate: b.inspectionDate,
       vendor: b.vendor,
@@ -311,14 +315,22 @@ app.put('/api/inspections/:id', (req, res, next) => {
     if (idx === -1) return res.status(404).json({ error: '해당 문서를 찾을 수 없습니다.' });
 
     const b = req.body;
-    const items = buildItems(b, groupUploadedFiles(req));
+    const filesByField = groupUploadedFiles(req);
+    const items = buildItems(b, filesByField);
     if (!b.inspectionDate || !b.vendor || !items.length) {
       return res.status(400).json({ error: '검사일자/업체명/품목명은 필수입니다.' });
     }
+    const specialPhotoUrls = [
+      ...safeJsonArray(b.keepSpecialPhotos),
+      ...(filesByField.specialPhotos || [])
+    ];
 
     // 수정 후 남은 사진 목록에 없는 파일은 디스크에서도 지운다.
     const existing = records[idx];
-    const keptUrls = new Set(items.flatMap(it => [...it.photoUrls, ...it.defectPhotoUrls]));
+    const keptUrls = new Set([
+      ...items.flatMap(it => [...it.photoUrls, ...it.defectPhotoUrls]),
+      ...specialPhotoUrls
+    ]);
     const previousUrls = [...(existing.photoUrls || []), ...(existing.defectPhotoUrls || [])];
     previousUrls
       .filter(url => !keptUrls.has(url))
@@ -331,6 +343,7 @@ app.put('/api/inspections/:id', (req, res, next) => {
       inspectionDate: b.inspectionDate,
       vendor: b.vendor,
       items,
+      specialPhotoUrls,
       inspector: b.inspector || '',
       inspectionItem: b.inspectionItem || '',
       criteria: b.criteria || '',
