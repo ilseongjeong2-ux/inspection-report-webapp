@@ -1,6 +1,73 @@
 {
-  "exportedAt": "2026-10-13T07:04:49.655Z",
+  "exportedAt": "2026-10-13T07:42:00.647Z",
   "records": [
+    {
+      "id": "2962f264-9154-416e-99e8-2f9dd2ff983c",
+      "inspectionNo": "퍼시스-시험26-10-00051",
+      "inspectionDate": "2026-10-08",
+      "vendor": "미래NC",
+      "items": [
+        {
+          "itemName": "MCIFND260181",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "productType": "반제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "1. 5*15 보링깊이 불량\n2. 우측 모션데스크 조절부 3*3 보링 가공불량",
+          "photoUrls": [
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635199_j6iol_IMG_6983.jpg",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635203_qjift_IMG_6979.jpg",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635206_vxxin_IMG_6981.jpg",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635209_yukdr_IMG_6982.jpg",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635211_1tlz4_IMG_6984.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": [
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635234_f9mib_ì¤í¬ë¦°ì· 2026-10-13 162808.png",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635237_re74o_IMG_6985.jpg",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635241_64i9t_ì¤í¬ë¦°ì· 2026-10-13 162540.png",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635243_m84y9_ì¤í¬ë¦°ì· 2026-10-13 162524.png",
+            "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635246_28jxo_ì¤í¬ë¦°ì· 2026-10-13 162201.png"
+          ]
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=M_q3zW7g60LaPE0gdVBQwo1CjLLJS2JyBLZUuZhuszo",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Och6fXbuJ5GITr9FU4AWtYi5KCwX9vL8bIn529Wnpyk",
+      "remarks": "1. 부적합 발생부분 업체 내용공유 완료\r\n2. 수정분 재입고 후 검사완료",
+      "createdAt": "2026-10-13T07:30:35.269Z",
+      "itemName": "MCIFND260181",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "specialPhotoUrls": [
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635234_f9mib_ì¤í¬ë¦°ì· 2026-10-13 162808.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635237_re74o_IMG_6985.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635241_64i9t_ì¤í¬ë¦°ì· 2026-10-13 162540.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635243_m84y9_ì¤í¬ë¦°ì· 2026-10-13 162524.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635246_28jxo_ì¤í¬ë¦°ì· 2026-10-13 162201.png"
+      ],
+      "photoUrls": [
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635199_j6iol_IMG_6983.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635203_qjift_IMG_6979.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635206_vxxin_IMG_6981.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635209_yukdr_IMG_6982.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635211_1tlz4_IMG_6984.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635234_f9mib_ì¤í¬ë¦°ì· 2026-10-13 162808.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635237_re74o_IMG_6985.jpg",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635241_64i9t_ì¤í¬ë¦°ì· 2026-10-13 162540.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635243_m84y9_ì¤í¬ë¦°ì· 2026-10-13 162524.png",
+        "photos/2962f264-9154-416e-99e8-2f9dd2ff983c/1791876635246_28jxo_ì¤í¬ë¦°ì· 2026-10-13 162201.png"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-10-13T07:41:22.817Z"
+    },
     {
       "id": "76555200-4dff-4cfc-a9b9-36527a27dc57",
       "inspectionNo": "퍼시스-시험26-09-00050",
@@ -12,6 +79,7 @@
           "color": "WW",
           "lotNo": "",
           "quantity": 1,
+          "productType": "반제품",
           "result": "적합",
           "defectDetail": "",
           "remarks": "",
@@ -45,7 +113,7 @@
         "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T06:20:44.175Z",
+      "updatedAt": "2026-10-13T07:19:45.741Z",
       "specialPhotoUrls": []
     },
     {
@@ -70,6 +138,7 @@
             "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
             "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
           ],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -117,6 +186,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156298_qxxd6_CCR2014ECA.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -133,6 +203,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156314_fa4qj_GDN0016O.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -148,6 +219,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156326_lgpkz_HBA40F11PHLN.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -163,6 +235,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156333_ectmc_HBA40F11PHLN NSS.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -178,6 +251,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156349_ok9fj_HSIC0145DBR.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -194,6 +268,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156363_3mx3d_ICB20DD00A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -210,6 +285,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156396_5ifs7_IVN60CP00A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -226,6 +302,7 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -291,6 +368,7 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094548_onh61_DSBC0082H (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094558_c3x4f_DSBC0082H (ì¬)(4).jpg"
           ],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -307,6 +385,7 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094580_y2s3x_ICD40CP01A (ì¬).jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -323,6 +402,7 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094604_6thyp_ICD60CP01A (ì¬).jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -340,6 +420,7 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094613_ihxyp_IHS12CP06A (ì¬) (2).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094622_fh6vh_IHS12CP06A (ì¬) (3).jpg"
           ],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -358,6 +439,7 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
           ],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -416,6 +498,7 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688320_28aic_DSCCAV20061.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -431,6 +514,7 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688357_nragr_HYC9092V.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -446,6 +530,7 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688367_90h9a_ICS14DD00A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -460,6 +545,7 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790747365277_pjwx8_ICV14DD01A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -476,6 +562,7 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -518,6 +605,7 @@
           "color": "WW",
           "lotNo": "",
           "quantity": 1,
+          "productType": "반제품",
           "result": "적합",
           "defectDetail": "",
           "remarks": "",
@@ -535,7 +623,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=02gGSWjqrgsqD-5SAasaUbSB_rGnkGx9sgE32i-FWgU",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=CHenRgBjaR9cQIi4gVCWjjY7oq9fDjSA1c53Sk_0-ic",
       "remarks": "1. 하단 우레탄 접착부 루타 따내기 부적합 ( 정 10 / 부 5 )\r\n2. 가공불량건 재입고(18일오후) 후 확인완료",
       "createdAt": "2026-09-22T00:50:41.667Z",
       "itemName": "MCIFND260068",
@@ -551,7 +639,7 @@
         "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790746828010_a8lqe_ì¤í¬ë¦°ì· 2026-09-30 143957.png"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-09-30T05:40:28.013Z",
+      "updatedAt": "2026-10-13T07:41:03.031Z",
       "specialPhotoUrls": []
     },
     {
@@ -575,6 +663,7 @@
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248129_ivzkj_ICB60CP05A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -589,6 +678,7 @@
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248133_hfvtd_DSBC0083H.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -603,6 +693,7 @@
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248137_8anii_ICV20DD00A.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         },
         {
@@ -617,6 +708,7 @@
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -686,6 +778,7 @@
             "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -741,6 +834,7 @@
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
           ],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],
@@ -788,6 +882,7 @@
             "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
           ],
           "defectPhotoUrls": [],
+          "productType": "제품",
           "specialPhotoUrls": []
         }
       ],

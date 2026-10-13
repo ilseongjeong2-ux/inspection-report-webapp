@@ -416,7 +416,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: (err && err.message) || '알 수 없는 서버 오류' });
 });
 
-app.listen(PORT, () => {
+const serverInstance = app.listen(PORT, () => {
   console.log('');
   console.log('============================================');
   console.log('  검사성적서 서버가 실행 중입니다');
@@ -430,4 +430,24 @@ app.listen(PORT, () => {
   console.log('  종료하려면 이 창을 닫으세요.');
   console.log('  창을 닫으면 동료들도 접속할 수 없습니다.');
   console.log('');
+});
+
+// 자동 시작으로 이미 켜져 있는데 또 실행한 경우, 알 수 없는 오류 대신 안내를 보여 준다.
+serverInstance.on('error', err => {
+  if (err.code === 'EADDRINUSE') {
+    console.log('');
+    console.log('============================================');
+    console.log('  검사성적서 서버는 이미 실행 중입니다');
+    console.log('============================================');
+    console.log('');
+    console.log('  로그인할 때 자동으로 켜지도록 되어 있습니다.');
+    console.log('  이 창은 닫으셔도 됩니다. (서버는 계속 돌아갑니다)');
+    console.log('');
+    console.log('  상태를 보려면 : 서버상태확인.bat');
+    console.log('  끄려면        : 서버중지.bat');
+    console.log('');
+    process.exit(0);
+  }
+  logError('[서버 시작 실패] ' + (err && err.stack ? err.stack : err));
+  process.exit(1);
 });
