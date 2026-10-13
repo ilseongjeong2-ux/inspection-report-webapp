@@ -751,6 +751,7 @@
     ['inspectionNo', '문서번호', 'common'],
     ['inspectionDate', '검사일자', 'common'],
     ['vendor', '업체명', 'common'],
+    ['productType', '구분', 'item'],
     ['itemName', '품목명', 'item'],
     ['color', '색상', 'item'],
     ['lotNo', 'Lot No.', 'item'],
@@ -1224,6 +1225,13 @@
               <option value="조건부적합">조건부적합</option>
             </select>
           </div>
+          <div class="form-item">
+            <label>구분</label>
+            <select class="it-product-type">
+              <option value="제품">제품</option>
+              <option value="반제품">반제품</option>
+            </select>
+          </div>
           <div class="form-item full item-defect-wrap">
             <label>불량내용</label>
             <textarea class="it-defect" rows="2">${escHtml(data.defectDetail)}</textarea>
@@ -1280,6 +1288,7 @@
     wrap.insertAdjacentHTML('beforeend', itemCardHtml(uid, values));
     const card = wrap.lastElementChild;
     card.querySelector('.it-result').value = values.result || '적합';
+    card.querySelector('.it-product-type').value = values.productType || '제품';
     card.querySelector('.it-photos').addEventListener('change', event => {
       state.files = Array.from(event.target.files);
       renderItemPhotos(card, state);
@@ -1407,6 +1416,7 @@
         state,
         values: {
           itemName: card.querySelector('.it-name').value.trim(),
+          productType: card.querySelector('.it-product-type').value,
           color: card.querySelector('.it-color').value.trim(),
           lotNo: card.querySelector('.it-lot').value.trim(),
           quantity: card.querySelector('.it-qty').value || '',

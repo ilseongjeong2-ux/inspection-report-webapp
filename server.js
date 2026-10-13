@@ -12,6 +12,7 @@ const UPLOAD_DIR = path.join(DATA_DIR, 'uploads');
 const SCHEDULED_FILE = path.join(DATA_DIR, 'scheduled.json');
 const DOC_NO_FLOOR_BY_YEAR = { '2026': 33 };
 const RESULT_VALUES = ['적합', '부적합', '조건부적합'];
+const PRODUCT_TYPES = ['제품', '반제품'];
 const MAX_PHOTO_BYTES = 100 * 1024 * 1024; // 사진 한 장 최대 용량
 
 fs.mkdirSync(UPLOAD_DIR, { recursive: true });
@@ -34,6 +35,9 @@ function safeJsonArray(text) {
 function normalizeResult(value) {
   return RESULT_VALUES.includes(value) ? value : '적합';
 }
+function normalizeProductType(value) {
+  return PRODUCT_TYPES.includes(value) ? value : '제품';
+}
 
 // 품목별 판정을 모아 성적서 전체 판정을 정한다: 하나라도 부적합이면 부적합.
 function overallResult(items) {
@@ -49,6 +53,7 @@ function withDerivedFields(record) {
   const items = (record.items || []).map(item => ({
     ...item,
     remarks: item.remarks || '',
+    productType: normalizeProductType(item.productType),
     photoUrls: item.photoUrls || [],
     defectPhotoUrls: item.defectPhotoUrls || [],
     specialPhotoUrls: item.specialPhotoUrls || []
@@ -183,6 +188,7 @@ function buildItems(body, filesByField) {
       color: (row.color || '').trim(),
       lotNo: (row.lotNo || '').trim(),
       quantity: Number.isFinite(quantity) ? quantity : null,
+      productType: normalizeProductType(row.productType),
       result: normalizeResult(row.result),
       defectDetail: (row.defectDetail || '').trim(),
       remarks: (row.remarks || '').trim(),

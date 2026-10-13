@@ -362,7 +362,9 @@
         ${certHeadRows(r, '판정')}
         <tr>
           <th>품목명 / 색상</th>
-          <td colspan="3">${itemColor}</td>
+          <td>${itemColor}</td>
+          <th class="small">구분</th>
+          <td class="small">${item.productType || '제품'}</td>
         </tr>
         <tr>
           <th>검사항목</th>
@@ -395,6 +397,7 @@
     const itemRows = items.map((item, index) => `
         <tr>
           <td class="item-no">${index + 1}</td>
+          <td>${item.productType || '제품'}</td>
           <td>${item.itemName || ''}</td>
           <td>${item.color || ''}</td>
           <td>${item.lotNo || ''}</td>
@@ -403,7 +406,7 @@
         </tr>`).join('');
 
     const itemSections = items.map((item, index) => {
-      const heading = [item.itemName || '', item.color || ''].filter(Boolean).join(' / ');
+      const heading = [item.productType || '제품', item.itemName || '', item.color || ''].filter(Boolean).join(' / ');
       const defectDetailRow = item.result !== '적합' ? multiLineRows('불량내용', item.defectDetail) : '';
       const defectPhotos = item.defectPhotoUrls || [];
       const defectPhotoRow = defectPhotos.length
@@ -442,14 +445,16 @@
       <table class="cert">
         <colgroup>
           <col style="width: 40px">
+          <col style="width: 70px">
           <col>
-          <col style="width: 90px">
-          <col style="width: 110px">
-          <col style="width: 60px">
-          <col style="width: 90px">
+          <col style="width: 80px">
+          <col style="width: 100px">
+          <col style="width: 55px">
+          <col style="width: 85px">
         </colgroup>
         <tr>
           <th>No.</th>
+          <th>구분</th>
           <th>품목명</th>
           <th>색상</th>
           <th>Lot No.</th>
