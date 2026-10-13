@@ -45,7 +45,14 @@ function overallResult(items) {
 
 // 기존 화면/CSV/필터가 쓰던 평면 필드(itemName, result, photoUrls 등)를 items로부터 다시 만들어 준다.
 function withDerivedFields(record) {
-  const items = record.items || [];
+  // 예전에 저장된 품목에는 없는 항목이 있으므로 읽는 쪽이 매번 챙기지 않도록 모양을 맞춘다.
+  const items = (record.items || []).map(item => ({
+    ...item,
+    remarks: item.remarks || '',
+    photoUrls: item.photoUrls || [],
+    defectPhotoUrls: item.defectPhotoUrls || [],
+    specialPhotoUrls: item.specialPhotoUrls || []
+  }));
   const first = items[0] || {};
   const defectDetail = items
     .filter(it => it.defectDetail)
@@ -60,9 +67,12 @@ function withDerivedFields(record) {
     quantity: first.quantity != null ? first.quantity : null,
     result: overallResult(items),
     defectDetail,
-    // 특이사항 사진은 품목이 아니라 성적서 전체에 붙는다.
-    specialPhotoUrls: record.specialPhotoUrls || [],
-    photoUrls: [...items.flatMap(it => it.photoUrls || []), ...(record.specialPhotoUrls || [])],
+    // 특이사항 사진도 품목마다 따로 가진다. 목록/라이트박스용 합본에는 함께 넣는다.
+    specialPhotoUrls: items.flatMap(it => it.specialPhotoUrls || []),
+    photoUrls: [
+      ...items.flatMap(it => it.photoUrls || []),
+      ...items.flatMap(it => it.specialPhotoUrls || [])
+    ],
     defectPhotoUrls: items.flatMap(it => it.defectPhotoUrls || [])
   };
 }
@@ -79,7 +89,8 @@ function normalizeRecord(record) {
     defectDetail: record.defectDetail || '',
     remarks: '',
     photoUrls: record.photoUrls || [],
-    defectPhotoUrls: record.defectPhotoUrls || []
+    defectPhotoUrls: record.defectPhotoUrls || [],
+    specialPhotoUrls: record.specialPhotoUrls || []
   };
   return withDerivedFields({ ...record, items: [legacyItem] });
 }
@@ -162,8 +173,10 @@ function buildItems(body, filesByField) {
   return rows.map((row, index) => {
     const uploaded = filesByField[`photos_${index}`] || (legacy && index === 0 ? filesByField.photos || [] : []);
     const uploadedDefect = filesByField[`defectPhotos_${index}`] || (legacy && index === 0 ? filesByField.defectPhotos || [] : []);
+    const uploadedSpecial = filesByField[`specialPhotos_${index}`] || [];
     const keptPhotos = Array.isArray(row.keepPhotos) ? row.keepPhotos : [];
     const keptDefectPhotos = Array.isArray(row.keepDefectPhotos) ? row.keepDefectPhotos : [];
+    const keptSpecialPhotos = Array.isArray(row.keepSpecialPhotos) ? row.keepSpecialPhotos : [];
     const quantity = row.quantity === '' || row.quantity == null ? null : Number(row.quantity);
     return {
       itemName: (row.itemName || '').trim(),
@@ -174,7 +187,8 @@ function buildItems(body, filesByField) {
       defectDetail: (row.defectDetail || '').trim(),
       remarks: (row.remarks || '').trim(),
       photoUrls: [...keptPhotos, ...uploaded],
-      defectPhotoUrls: [...keptDefectPhotos, ...uploadedDefect]
+      defectPhotoUrls: [...keptDefectPhotos, ...uploadedDefect],
+      specialPhotoUrls: [...keptSpecialPhotos, ...uploadedSpecial]
     };
   }).filter(item => item.itemName);
 }
@@ -269,7 +283,6 @@ app.post('/api/inspections', (req, res, next) => {
     }
     const record = withDerivedFields({
       id: req.recordId,
-      specialPhotoUrls: filesByField.specialPhotos || [],
       inspectionNo: generateDocNo(b.inspectionDate),
       inspectionDate: b.inspectionDate,
       vendor: b.vendor,
@@ -320,17 +333,11 @@ app.put('/api/inspections/:id', (req, res, next) => {
     if (!b.inspectionDate || !b.vendor || !items.length) {
       return res.status(400).json({ error: '검사일자/업체명/품목명은 필수입니다.' });
     }
-    const specialPhotoUrls = [
-      ...safeJsonArray(b.keepSpecialPhotos),
-      ...(filesByField.specialPhotos || [])
-    ];
-
     // 수정 후 남은 사진 목록에 없는 파일은 디스크에서도 지운다.
     const existing = records[idx];
-    const keptUrls = new Set([
-      ...items.flatMap(it => [...it.photoUrls, ...it.defectPhotoUrls]),
-      ...specialPhotoUrls
-    ]);
+    const keptUrls = new Set(
+      items.flatMap(it => [...it.photoUrls, ...it.defectPhotoUrls, ...it.specialPhotoUrls])
+    );
     const previousUrls = [...(existing.photoUrls || []), ...(existing.defectPhotoUrls || [])];
     previousUrls
       .filter(url => !keptUrls.has(url))
@@ -343,7 +350,6 @@ app.put('/api/inspections/:id', (req, res, next) => {
       inspectionDate: b.inspectionDate,
       vendor: b.vendor,
       items,
-      specialPhotoUrls,
       inspector: b.inspector || '',
       inspectionItem: b.inspectionItem || '',
       criteria: b.criteria || '',

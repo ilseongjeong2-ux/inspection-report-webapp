@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-13T07:01:16.126Z",
+  "exportedAt": "2026-10-13T07:04:49.655Z",
   "records": [
     {
       "id": "76555200-4dff-4cfc-a9b9-36527a27dc57",
@@ -21,7 +21,8 @@
             "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467208_msjpz_FND0714 (3).jpg",
             "photos/76555200-4dff-4cfc-a9b9-36527a27dc57/1790745467209_e91mn_FND0714.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "정일성",
@@ -68,7 +69,8 @@
             "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366914_cww6f_MCICA0260011.jpg",
             "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366916_gl6xv_MCICA0260011 (2).jpg",
             "photos/d3b08bc6-93fa-44b4-be0d-fc664fa6d3df/1790745366918_jfhxs_MCICA0260011 (3).jpg"
-          ]
+          ],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "정일성",
@@ -114,7 +116,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156294_wyjaq_CCR2014ECA (3).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156298_qxxd6_CCR2014ECA.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "GDN0016O",
@@ -129,7 +132,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156312_0dmly_GDN0016O (3).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156314_fa4qj_GDN0016O.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "HBA40F11PHLN",
@@ -143,7 +147,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156316_gnvfo_HBA40F11PHLN (2).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156326_lgpkz_HBA40F11PHLN.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "HBA40F11PHLN",
@@ -157,7 +162,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156329_hps8d_HBA40F11PHLN NSS (2).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156333_ectmc_HBA40F11PHLN NSS.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "HSOC0145DBR",
@@ -171,7 +177,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156346_8fv57_HSIC0145DBR (2).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156349_ok9fj_HSIC0145DBR.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICB20DD00A",
@@ -186,7 +193,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156360_wkmn7_ICB20DD00A (3).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156363_3mx3d_ICB20DD00A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "IVN60CP00A",
@@ -201,7 +209,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156388_8n00w_IVN60CP00A (3).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744156396_5ifs7_IVN60CP00A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "HBA40F15PHLN",
@@ -216,7 +225,8 @@
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221734_zxw6f_HBA40F15PHLN (3).jpg",
             "photos/8634d86d-eda0-4901-a676-025b3095fba0/1790744221736_9637b_HBA40F15PHLN.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "정일성",
@@ -280,7 +290,8 @@
           "defectPhotoUrls": [
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094548_onh61_DSBC0082H (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094558_c3x4f_DSBC0082H (ì¬)(4).jpg"
-          ]
+          ],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICD40CP01A",
@@ -295,7 +306,8 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094574_jzi3c_ICD40CP01A (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094580_y2s3x_ICD40CP01A (ì¬).jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICD60CP01A",
@@ -310,7 +322,8 @@
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094598_y8l0m_ICD60CP01A (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094604_6thyp_ICD60CP01A (ì¬).jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "IHS12CP06A",
@@ -326,7 +339,8 @@
           "defectPhotoUrls": [
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094613_ihxyp_IHS12CP06A (ì¬) (2).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094622_fh6vh_IHS12CP06A (ì¬) (3).jpg"
-          ]
+          ],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "IHV00CP00A",
@@ -343,7 +357,8 @@
           "defectPhotoUrls": [
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094631_6hwex_IHV00CP00A (ì¬) (3).jpg",
             "photos/823170da-2b9a-490a-a922-950aff38dfb8/1790745094635_pviws_IHV00CP00A (ì¬) (5).jpg"
-          ]
+          ],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "정일성",
@@ -400,7 +415,8 @@
           "photoUrls": [
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688320_28aic_DSCCAV20061.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "HYC9092V",
@@ -414,7 +430,8 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688325_esjx5_HYC9092V (2).jpg",
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688357_nragr_HYC9092V.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICS14DD00A",
@@ -428,7 +445,8 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688361_x0cjo_ICS14DD00A (2).jpg",
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688367_90h9a_ICS14DD00A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICV14DD01A",
@@ -441,7 +459,8 @@
           "photoUrls": [
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790747365277_pjwx8_ICV14DD01A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "IVN14CP05A",
@@ -456,7 +475,8 @@
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688379_9s1ld_IVN14CP05A (2).jpg",
             "photos/50da21aa-ba97-44ad-a6b0-e91070cbc183/1790743688388_1eyyk_IVN14CP05A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "정일성",
@@ -507,7 +527,8 @@
             "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790038241664_6fyfl_IMG_6804.jpg",
             "photos/5fb771f1-5616-40fe-937b-a5d91e9e70bd/1790746828010_a8lqe_ì¤í¬ë¦°ì· 2026-09-30 143957.png"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "배훈기",
@@ -553,7 +574,8 @@
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248126_3wp3w_ICB60CP05A (3).jpg",
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248129_ivzkj_ICB60CP05A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "DSBC0083H",
@@ -566,7 +588,8 @@
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248133_hfvtd_DSBC0083H.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "ICV20DD00A",
@@ -579,7 +602,8 @@
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248137_8anii_ICV20DD00A.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         },
         {
           "itemName": "DSCC0063CH",
@@ -592,7 +616,8 @@
           "photoUrls": [
             "photos/4dc5f4e1-f376-4727-88bf-6ebdd949d77e/1789448248139_y2huj_DSCC0063CH.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "inspector": "박동현",
@@ -660,7 +685,8 @@
             "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196388_IMG_6487 (1).jpg",
             "photos/96d39668-5d50-4a5a-b2b4-1bffc4038f2d/1789432196392_IMG_6486 (1).jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "specialPhotoUrls": []
@@ -714,7 +740,8 @@
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657707_IMG_6190.jpg",
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657709_IMG_6191.jpg",
             "photos/259f0cf0-4c57-4c4e-b72c-c8222689f8ca/1787383657712_IMG_6192.jpg"
-          ]
+          ],
+          "specialPhotoUrls": []
         }
       ],
       "specialPhotoUrls": []
@@ -760,7 +787,8 @@
             "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569362_IMG_6114.jpg",
             "photos/ed864b65-2759-4c2d-901b-1cebcb10b887/1787039569365_IMG_6116.jpg"
           ],
-          "defectPhotoUrls": []
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
         }
       ],
       "specialPhotoUrls": []

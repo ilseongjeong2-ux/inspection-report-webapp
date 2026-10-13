@@ -405,12 +405,6 @@
           <label>비고 (성적서 전체)</label>
           <textarea id="iRemarks" rows="2" placeholder="품목별 비고는 각 품목 카드 안에 적습니다"></textarea>
         </div>
-        <div class="form-item full">
-          <label>특이사항 사진 (여러 장 선택 가능)</label>
-          <div class="file-preview" id="specialExistingPreview"></div>
-          <input type="file" id="iSpecialPhotos" accept="image/*" multiple />
-          <div class="file-preview" id="specialFilePreview"></div>
-        </div>
       </div>
       <div class="status-msg info" id="registerStatus"></div>
       <div class="modal-actions">
@@ -493,32 +487,6 @@
   // 품목 카드 하나당 상태(유지할 기존 사진 목록 + 새로 고른 파일)를 순서대로 담아 둔다.
   let itemStates = [];
   let itemUidSeq = 0;
-  // 특이사항 사진은 품목이 아니라 성적서 전체에 붙으므로 따로 담는다.
-  let specialPhotoState = { keep: [], files: [] };
-
-  function renderSpecialPhotos() {
-    renderThumbList(document.getElementById('specialExistingPreview'), specialPhotoState.keep, url => {
-      specialPhotoState.keep = specialPhotoState.keep.filter(u => u !== url);
-      renderSpecialPhotos();
-    });
-    renderPickedFiles(document.getElementById('specialFilePreview'), specialPhotoState.files, index => {
-      specialPhotoState.files.splice(index, 1);
-      syncFileInput(document.getElementById('iSpecialPhotos'), specialPhotoState.files);
-      renderSpecialPhotos();
-    });
-  }
-
-  function resetSpecialPhotos(urls) {
-    specialPhotoState = { keep: [...(urls || [])], files: [] };
-    const input = document.getElementById('iSpecialPhotos');
-    if (input) input.value = '';
-    renderSpecialPhotos();
-  }
-
-  document.getElementById('iSpecialPhotos').addEventListener('change', event => {
-    specialPhotoState.files = Array.from(event.target.files);
-    renderSpecialPhotos();
-  });
 
   function escHtml(value) {
     return String(value == null ? '' : value)
@@ -1163,7 +1131,6 @@
     document.getElementById('registerForm').reset();
     resetItemCards();
     addItemCard();
-    resetSpecialPhotos([]);
     document.getElementById('iDate').value = new Date().toISOString().slice(0, 10);
     document.getElementById('iInspectionItem').value = DEFAULT_INSPECTION_ITEM;
     document.getElementById('iCriteria').value = DEFAULT_CRITERIA;
@@ -1189,7 +1156,6 @@
     document.getElementById('iRequestDocUrl').value = r.requestDocUrl || '';
     document.getElementById('iReportDocUrl').value = r.reportDocUrl || '';
     document.getElementById('iRemarks').value = r.remarks || '';
-    resetSpecialPhotos(r.specialPhotoUrls);
     document.getElementById('registerStatus').textContent = '';
     document.getElementById('registerModalTitle').textContent = '검사성적서 수정';
     document.getElementById('submitBtn').textContent = '수정 저장';
@@ -1281,6 +1247,12 @@
             <input type="file" class="it-defect-photos" accept="image/*" multiple />
             <div class="file-preview it-defect-preview"></div>
           </div>
+          <div class="form-item full">
+            <label>특이사항 사진 (여러 장 선택 가능)</label>
+            <div class="file-preview it-existing-special"></div>
+            <input type="file" class="it-special-photos" accept="image/*" multiple />
+            <div class="file-preview it-special-preview"></div>
+          </div>
         </div>
       </div>`;
   }
@@ -1297,8 +1269,10 @@
       uid,
       keepPhotos: [...(values.photoUrls || [])],
       keepDefectPhotos: [...(values.defectPhotoUrls || [])],
+      keepSpecialPhotos: [...(values.specialPhotoUrls || [])],
       files: [],
-      defectFiles: []
+      defectFiles: [],
+      specialFiles: []
     };
     itemStates.push(state);
 
@@ -1312,6 +1286,10 @@
     });
     card.querySelector('.it-defect-photos').addEventListener('change', event => {
       state.defectFiles = Array.from(event.target.files);
+      renderItemPhotos(card, state);
+    });
+    card.querySelector('.it-special-photos').addEventListener('change', event => {
+      state.specialFiles = Array.from(event.target.files);
       renderItemPhotos(card, state);
     });
     renderItemPhotos(card, state);
@@ -1384,6 +1362,15 @@
       syncFileInput(card.querySelector('.it-defect-photos'), state.defectFiles);
       renderItemPhotos(card, state);
     });
+    renderThumbList(card.querySelector('.it-existing-special'), state.keepSpecialPhotos, url => {
+      state.keepSpecialPhotos = state.keepSpecialPhotos.filter(u => u !== url);
+      renderItemPhotos(card, state);
+    });
+    renderPickedFiles(card.querySelector('.it-special-preview'), state.specialFiles, index => {
+      state.specialFiles.splice(index, 1);
+      syncFileInput(card.querySelector('.it-special-photos'), state.specialFiles);
+      renderItemPhotos(card, state);
+    });
   }
 
   // 방금 고른 사진도 저장 전에 한 장씩 뺄 수 있게 x 버튼을 붙인다.
@@ -1427,7 +1414,8 @@
           defectDetail: result === '적합' ? '' : card.querySelector('.it-defect').value.trim(),
           remarks: card.querySelector('.it-remarks').value.trim(),
           keepPhotos: state.keepPhotos,
-          keepDefectPhotos: state.keepDefectPhotos
+          keepDefectPhotos: state.keepDefectPhotos,
+          keepSpecialPhotos: state.keepSpecialPhotos
         }
       };
     }).filter(entry => entry.values.itemName);
@@ -1438,7 +1426,11 @@
   // 사진을 실제로 한 조각 읽어 본다. USB/네트워크 드라이브가 빠졌거나 파일이 옮겨졌으면 여기서 걸린다.
   async function checkPhotosBeforeUpload(entries, status) {
     for (let index = 0; index < entries.length; index += 1) {
-      const files = [...entries[index].state.files, ...entries[index].state.defectFiles];
+      const files = [
+        ...entries[index].state.files,
+        ...entries[index].state.defectFiles,
+        ...entries[index].state.specialFiles
+      ];
       for (const file of files) {
         const sizeMb = file.size / 1024 / 1024;
         if (sizeMb > MAX_PHOTO_MB) {
@@ -1459,7 +1451,8 @@
       }
     }
     const totalMb = entries.reduce((sum, entry) =>
-      sum + [...entry.state.files, ...entry.state.defectFiles].reduce((s, f) => s + f.size, 0), 0) / 1024 / 1024;
+      sum + [...entry.state.files, ...entry.state.defectFiles, ...entry.state.specialFiles]
+        .reduce((s, f) => s + f.size, 0), 0) / 1024 / 1024;
     if (totalMb > 5) {
       status.textContent = `사진 ${totalMb.toFixed(1)}MB 를 올리는 중입니다. 잠시만 기다려 주세요...`;
     }
@@ -1499,12 +1492,11 @@
       formData.append('reportDocUrl', document.getElementById('iReportDocUrl').value.trim());
       formData.append('remarks', document.getElementById('iRemarks').value.trim());
       formData.append('items', JSON.stringify(entries.map(entry => entry.values)));
-      formData.append('keepSpecialPhotos', JSON.stringify(specialPhotoState.keep));
-      specialPhotoState.files.forEach(file => formData.append('specialPhotos', file));
       // 사진은 품목 순서에 맞춰 photos_0, photos_1 ... 이름으로 올린다.
       entries.forEach((entry, index) => {
         entry.state.files.forEach(file => formData.append(`photos_${index}`, file));
         entry.state.defectFiles.forEach(file => formData.append(`defectPhotos_${index}`, file));
+        entry.state.specialFiles.forEach(file => formData.append(`specialPhotos_${index}`, file));
       });
 
       let res;

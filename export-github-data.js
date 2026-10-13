@@ -66,7 +66,8 @@ function toPublicRecord(record) {
     items: items.map(item => ({
       ...item,
       photoUrls: mapPhotoUrls(item.photoUrls),
-      defectPhotoUrls: mapPhotoUrls(item.defectPhotoUrls)
+      defectPhotoUrls: mapPhotoUrls(item.defectPhotoUrls),
+      specialPhotoUrls: mapPhotoUrls(item.specialPhotoUrls)
     })),
     photoUrls: mapPhotoUrls(record.photoUrls),
     defectPhotoUrls: mapPhotoUrls(record.defectPhotoUrls),
@@ -88,12 +89,12 @@ function listFilesRecursively(dir, base) {
 function syncPhotos(records) {
   const needed = new Set();
   records.forEach(record => {
-    // 성적서 전체에 붙는 특이사항 사진도 함께 옮긴다.
-    (record.specialPhotoUrls || []).forEach(url => {
-      if (url.startsWith('photos/')) needed.add(url.slice('photos/'.length));
-    });
     record.items.forEach(item => {
-      [...(item.photoUrls || []), ...(item.defectPhotoUrls || [])].forEach(url => {
+      [
+        ...(item.photoUrls || []),
+        ...(item.defectPhotoUrls || []),
+        ...(item.specialPhotoUrls || [])
+      ].forEach(url => {
         if (url.startsWith('photos/')) needed.add(url.slice('photos/'.length));
       });
     });
