@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-30T05:43:48.656Z",
+  "exportedAt": "2026-10-30T05:49:33.070Z",
   "records": [
     {
       "id": "03e07b90-ca26-47a5-a6f4-ea12cd399073",
@@ -67,7 +67,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIPTjD9LWUAhvNGksfKkeT1g",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=fjDh829EmZbpOYiclAZojseyYcLIaKRbqf21BnABmEY",
       "remarks": "",
       "createdAt": "2026-10-30T05:35:40.067Z",
       "itemName": "CGR0015",
@@ -92,7 +92,8 @@
         "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540051_6701w_FDA0800A (3).jpg",
         "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540058_e0i6h_FDA0800A.jpg"
       ],
-      "defectPhotoUrls": []
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-10-30T05:49:07.674Z"
     },
     {
       "id": "c0913e02-6d83-4d5f-994f-155687e4c2bd",
@@ -379,7 +380,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIDXE_ok1qMsw_QYCF8HBPIg",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=fjDh829EmZbpOYiclAZojo4ErKJFC7xjz0lCXNebrpw",
       "remarks": "",
       "createdAt": "2026-10-30T05:24:00.814Z",
       "itemName": "CAB0083HEN",
@@ -456,7 +457,7 @@
         "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840723_jgsqq_IBH11CP02A_3.jpg",
         "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840744_ra4kv_IBV00CP00B_3.jpg"
       ],
-      "updatedAt": "2026-10-30T05:30:37.726Z"
+      "updatedAt": "2026-10-30T05:49:21.003Z"
     },
     {
       "id": "95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700",
@@ -645,7 +646,7 @@
       "inspectionItem": "외관 및 치수",
       "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
       "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIK9UysD-Mv_5K9GC5reDK-c",
-      "reportDocUrl": "",
+      "reportDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=fjDh829EmZbpOYiclAZojjWwsb8NI1VskdHjef3jYZ4",
       "remarks": "",
       "createdAt": "2026-10-30T04:35:07.080Z",
       "itemName": "CAB0083N",
@@ -680,7 +681,7 @@
         "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907072_1974g_IFV00AQ23A_2.jpg"
       ],
       "defectPhotoUrls": [],
-      "updatedAt": "2026-10-30T05:39:34.882Z"
+      "updatedAt": "2026-10-30T05:49:27.795Z"
     },
     {
       "id": "2962f264-9154-416e-99e8-2f9dd2ff983c",
