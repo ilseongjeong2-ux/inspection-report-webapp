@@ -1,6 +1,687 @@
 {
-  "exportedAt": "2026-10-13T07:42:00.647Z",
+  "exportedAt": "2026-10-30T05:43:48.656Z",
   "records": [
+    {
+      "id": "03e07b90-ca26-47a5-a6f4-ea12cd399073",
+      "inspectionNo": "퍼시스-시험26-10-00054",
+      "inspectionDate": "2026-10-30",
+      "vendor": "에픽",
+      "items": [
+        {
+          "itemName": "CGR0015",
+          "color": "WW",
+          "lotNo": "2026.10.23-21 EP01",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539893_afeng_CGR0015.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539896_ztxyu_CGR0015_2.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539900_lr10t_CGR0015_3.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539909_4ws52_CGR0015_4.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539921_v9x5g_CGR0015-3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "CGR0010",
+          "color": "WW",
+          "lotNo": "2026.10.23-21 EP01",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539924_b4k58_CGR0010.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539932_e9d1z_CGR0010_2.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539962_ui03r_CGR0010_3.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539987_jt5a2_CGR0010_4.jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540031_xmdf6_CGR0010_5.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "FDA0800A",
+          "color": "WW",
+          "lotNo": "2026.10.23-21 EP01",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540036_gxcep_FDA0800A (2).jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540051_6701w_FDA0800A (3).jpg",
+            "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540058_e0i6h_FDA0800A.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIPTjD9LWUAhvNGksfKkeT1g",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-10-30T05:35:40.067Z",
+      "itemName": "CGR0015",
+      "color": "WW",
+      "lotNo": "2026.10.23-21 EP01",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "specialPhotoUrls": [],
+      "photoUrls": [
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539893_afeng_CGR0015.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539896_ztxyu_CGR0015_2.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539900_lr10t_CGR0015_3.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539909_4ws52_CGR0015_4.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539921_v9x5g_CGR0015-3.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539924_b4k58_CGR0010.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539932_e9d1z_CGR0010_2.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539962_ui03r_CGR0010_3.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338539987_jt5a2_CGR0010_4.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540031_xmdf6_CGR0010_5.jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540036_gxcep_FDA0800A (2).jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540051_6701w_FDA0800A (3).jpg",
+        "photos/03e07b90-ca26-47a5-a6f4-ea12cd399073/1793338540058_e0i6h_FDA0800A.jpg"
+      ],
+      "defectPhotoUrls": []
+    },
+    {
+      "id": "c0913e02-6d83-4d5f-994f-155687e4c2bd",
+      "inspectionNo": "퍼시스-시험26-10-00053",
+      "inspectionDate": "2026-10-16",
+      "vendor": "신일",
+      "items": [
+        {
+          "itemName": "CAB0083HEN",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840372_b6ull_CAB0083HEN.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840378_vnije_CAB0083HEN_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840409_a6ax0_CAB0083HEN_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "CEC0082ST",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "부적합",
+          "defectDetail": "1. 전체 재단치수 +1mm\n2. 이동카드 상부면 백화",
+          "remarks": "1. 현장작업자 재단치수 혼동확인 (10.21 업체 회수)",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840418_mfe4t_CEC0082ST.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840422_gc9o0_CEC0082ST_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840426_5l731_CEC0082ST-_7.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840439_fuej7_CEC0082ST_3.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840446_wz3dr_CEC0082ST_4.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840455_r8o7y_CEC0082ST_5.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840465_y1uy8_CEC0082ST_7.jpg"
+          ]
+        },
+        {
+          "itemName": "DSBC0483BN",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840475_i0ehb_DSBC0483BN.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840480_dupqs_DSBC0483BN_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCAAD0601",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840485_trxvb_DSCAAD0601.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840492_tqi9g_DSCAAD0601_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840498_g0ips_DSCAAD0601_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCC0062BS1",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "조건부적합",
+          "defectDetail": "1.거울도어 벽고정 스티커 누락",
+          "remarks": "1.양산제품 부착확인 완료\n2.검사입고품 부착후 출고완료",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840509_h01f7_DSCC0062BS1.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840514_049rg_DSCC0062BS1_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840520_4u2sb_DSCC0062BS1_3.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840531_qgeqo_DSCC0062BS1_4.jpg"
+          ],
+          "specialPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840540_9svay_22244.jpg"
+          ]
+        },
+        {
+          "itemName": "DSCC0063CH",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840541_jtion_DSCC0063CH.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840545_ivy6r_DSCC0063CH_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840557_8f87h_DSCC0063CH_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCCAB1406",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "부적합",
+          "defectDetail": "1. 미니픽스 보링깊이 불량 (정 15x12 , 부 15x11.4)\n2. 전/후면 긁힘 스크래치",
+          "remarks": "1. 10.21 업체 재가공품 검사완료",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840570_xrwws_DSCCAB1406.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840576_2n3yl_DSCCAB1406_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840584_60bs6_DSCCAB1406_3.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840599_t68nk_DSCCAB1406_4.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840605_s8c9g_DSCCAB1406_5.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840619_f5lx7_DSCCAB1406_6.jpg"
+          ],
+          "specialPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840626_lrgx2_DSCCAB1406_ë¯¸ëí½ì¤ ì ì.jpg"
+          ]
+        },
+        {
+          "itemName": "DSCCAD00701",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840639_3mz31_DSCCAD0701.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840645_5z30x_DSCCAD0701_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840651_bftq9_DSCCAD0801_4.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCCAD0801",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840664_l1l1d_DSCCAD0801.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840671_01s3k_DSCCAD0801_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840676_n1f5m_DSCCAD0801_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IBB11CP00A",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "부적합",
+          "defectDetail": "1. 바닥판B 이물질 및 백화",
+          "remarks": "1. 10.21 업체 회수완료",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840684_mgi59_IBB11CP00A.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840690_lzxfb_IBB11CP00A_2.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840697_8vgje_IBB11CP00A_3.jpg"
+          ],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IBH11CP02A",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "부적합",
+          "defectDetail": "1. 미니픽스 보링깊이 불량 (정 5x15 부 5x 11.4)",
+          "remarks": "1. 10.21 업체 회수 및 재가공품 검사 완료",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840699_sqmj8_IBH11CP02A.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840705_447su_IBH11CP02A_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840710_fnbdr_IBH11CP02A_4.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840723_jgsqq_IBH11CP02A_3.jpg"
+          ],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IBV00CP00B",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "부적합",
+          "defectDetail": "1. 측판L/R 미니픽스 보링깊이 불량 (정5x12 부 5x11.4)",
+          "remarks": "1. 10.21 업체회수 후 재가공품 검사완료",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840726_nuhjf_IBV00CP00B.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840730_sr4g2_IBV00CP00B_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840735_e7vmt_IBV00CP00B_4.jpg"
+          ],
+          "defectPhotoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840744_ra4kv_IBV00CP00B_3.jpg"
+          ],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "ICV14DD00A",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840750_0x0hd_ICV14DD00A.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840756_iphxq_ICV14DD00A_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840763_k0opu_ICV14DD00A_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IHD12CP00A",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840771_qjd7t_IHD12CP00A.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840776_6fy12_IHD12CP00A_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840785_o84gu_IHD12CP00A_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IHS14CP05A",
+          "color": "WW",
+          "lotNo": "H-2026-10-15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840795_fdcxn_IHS14CP05A.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840799_y6mqh_IHS14CP05A_2.jpg",
+            "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840804_7kipo_IHS14CP05A_3.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIDXE_ok1qMsw_QYCF8HBPIg",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-10-30T05:24:00.814Z",
+      "itemName": "CAB0083HEN",
+      "color": "WW",
+      "lotNo": "H-2026-10-15",
+      "quantity": 1,
+      "result": "부적합",
+      "defectDetail": "[CEC0082ST] 1. 전체 재단치수 +1mm\n2. 이동카드 상부면 백화\n[DSCC0062BS1] 1.거울도어 벽고정 스티커 누락\n[DSCCAB1406] 1. 미니픽스 보링깊이 불량 (정 15x12 , 부 15x11.4)\n2. 전/후면 긁힘 스크래치\n[IBB11CP00A] 1. 바닥판B 이물질 및 백화\n[IBH11CP02A] 1. 미니픽스 보링깊이 불량 (정 5x15 부 5x 11.4)\n[IBV00CP00B] 1. 측판L/R 미니픽스 보링깊이 불량 (정5x12 부 5x11.4)",
+      "specialPhotoUrls": [
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840439_fuej7_CEC0082ST_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840446_wz3dr_CEC0082ST_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840455_r8o7y_CEC0082ST_5.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840465_y1uy8_CEC0082ST_7.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840540_9svay_22244.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840626_lrgx2_DSCCAB1406_ë¯¸ëí½ì¤ ì ì.jpg"
+      ],
+      "photoUrls": [
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840372_b6ull_CAB0083HEN.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840378_vnije_CAB0083HEN_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840409_a6ax0_CAB0083HEN_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840418_mfe4t_CEC0082ST.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840422_gc9o0_CEC0082ST_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840426_5l731_CEC0082ST-_7.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840475_i0ehb_DSBC0483BN.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840480_dupqs_DSBC0483BN_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840485_trxvb_DSCAAD0601.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840492_tqi9g_DSCAAD0601_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840498_g0ips_DSCAAD0601_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840509_h01f7_DSCC0062BS1.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840514_049rg_DSCC0062BS1_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840520_4u2sb_DSCC0062BS1_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840541_jtion_DSCC0063CH.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840545_ivy6r_DSCC0063CH_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840557_8f87h_DSCC0063CH_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840570_xrwws_DSCCAB1406.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840576_2n3yl_DSCCAB1406_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840584_60bs6_DSCCAB1406_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840639_3mz31_DSCCAD0701.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840645_5z30x_DSCCAD0701_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840651_bftq9_DSCCAD0801_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840664_l1l1d_DSCCAD0801.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840671_01s3k_DSCCAD0801_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840676_n1f5m_DSCCAD0801_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840684_mgi59_IBB11CP00A.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840690_lzxfb_IBB11CP00A_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840699_sqmj8_IBH11CP02A.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840705_447su_IBH11CP02A_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840710_fnbdr_IBH11CP02A_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840726_nuhjf_IBV00CP00B.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840730_sr4g2_IBV00CP00B_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840735_e7vmt_IBV00CP00B_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840750_0x0hd_ICV14DD00A.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840756_iphxq_ICV14DD00A_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840763_k0opu_ICV14DD00A_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840771_qjd7t_IHD12CP00A.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840776_6fy12_IHD12CP00A_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840785_o84gu_IHD12CP00A_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840795_fdcxn_IHS14CP05A.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840799_y6mqh_IHS14CP05A_2.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840804_7kipo_IHS14CP05A_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840439_fuej7_CEC0082ST_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840446_wz3dr_CEC0082ST_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840455_r8o7y_CEC0082ST_5.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840465_y1uy8_CEC0082ST_7.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840540_9svay_22244.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840626_lrgx2_DSCCAB1406_ë¯¸ëí½ì¤ ì ì.jpg"
+      ],
+      "defectPhotoUrls": [
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840531_qgeqo_DSCC0062BS1_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840599_t68nk_DSCCAB1406_4.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840605_s8c9g_DSCCAB1406_5.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840619_f5lx7_DSCCAB1406_6.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840697_8vgje_IBB11CP00A_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840723_jgsqq_IBH11CP02A_3.jpg",
+        "photos/c0913e02-6d83-4d5f-994f-155687e4c2bd/1793337840744_ra4kv_IBV00CP00B_3.jpg"
+      ],
+      "updatedAt": "2026-10-30T05:30:37.726Z"
+    },
+    {
+      "id": "95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700",
+      "inspectionNo": "퍼시스-시험26-10-00052",
+      "inspectionDate": "2026-10-16",
+      "vendor": "올품 퍼니처",
+      "items": [
+        {
+          "itemName": "CAB0083N",
+          "color": "RCN",
+          "lotNo": "OP26A15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906945_75xo4_CAB0083N.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906962_5rgox_CAB0083N_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "CEC0082BT",
+          "color": "RCN",
+          "lotNo": "OP26A15",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906970_b4dgp_CEC0082ST.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906978_3vx10_CEC0082ST_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "CEC0082BT",
+          "color": "WW",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906992_mwbh4_CEC0082BT.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906997_zc2d9_CEC0082BT_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSAD0214",
+          "color": "OS",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907001_3eh9h_DSAD0214.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907009_ue72n_DSAD0214_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCCAD0801",
+          "color": "OS",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907016_3x3gt_DSCCAD0801.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907025_qupbr_DSCCAD0801_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSCCAV20061",
+          "color": "WW",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907028_r24xs_DSCCAV20061.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907031_lx2az_DSCCAV20061_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "DSDCMT1606",
+          "color": "WW",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907034_ssysa_DSDCMT1606.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907039_fbjy2_DSDCMT1606_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IBN00CP00B",
+          "color": "WW",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907041_octpo_IBN00CP00B.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907045_xes06_IBN00CP00B_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IBN00CP02B",
+          "color": "WW",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907049_lh1jq_IBN00CP02B.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907054_abnri_IBN00CP02B_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IFS40AQ05A",
+          "color": "SP",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907060_z8trw_IFS40AQ05A.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907064_1sc5s_IFS40AQ05A_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        },
+        {
+          "itemName": "IFV00AQ23A",
+          "color": "SP",
+          "lotNo": "OP26A12",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907068_xo46e_IFV00AQ23A.jpg",
+            "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907072_1974g_IFV00AQ23A_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIK9UysD-Mv_5K9GC5reDK-c",
+      "reportDocUrl": "",
+      "remarks": "",
+      "createdAt": "2026-10-30T04:35:07.080Z",
+      "itemName": "CAB0083N",
+      "color": "RCN",
+      "lotNo": "OP26A15",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "specialPhotoUrls": [],
+      "photoUrls": [
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906945_75xo4_CAB0083N.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906962_5rgox_CAB0083N_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906970_b4dgp_CEC0082ST.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906978_3vx10_CEC0082ST_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906992_mwbh4_CEC0082BT.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334906997_zc2d9_CEC0082BT_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907001_3eh9h_DSAD0214.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907009_ue72n_DSAD0214_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907016_3x3gt_DSCCAD0801.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907025_qupbr_DSCCAD0801_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907028_r24xs_DSCCAV20061.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907031_lx2az_DSCCAV20061_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907034_ssysa_DSDCMT1606.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907039_fbjy2_DSDCMT1606_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907041_octpo_IBN00CP00B.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907045_xes06_IBN00CP00B_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907049_lh1jq_IBN00CP02B.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907054_abnri_IBN00CP02B_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907060_z8trw_IFS40AQ05A.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907064_1sc5s_IFS40AQ05A_2.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907068_xo46e_IFV00AQ23A.jpg",
+        "photos/95aa4e8d-6c03-44c5-98e1-ca1ecbe8c700/1793334907072_1974g_IFV00AQ23A_2.jpg"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-10-30T05:39:34.882Z"
+    },
     {
       "id": "2962f264-9154-416e-99e8-2f9dd2ff983c",
       "inspectionNo": "퍼시스-시험26-10-00051",
