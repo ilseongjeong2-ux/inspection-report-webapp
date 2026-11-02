@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-30T05:49:33.070Z",
+  "exportedAt": "2026-11-02T09:46:29.688Z",
   "records": [
     {
       "id": "03e07b90-ca26-47a5-a6f4-ea12cd399073",
@@ -94,6 +94,55 @@
       ],
       "defectPhotoUrls": [],
       "updatedAt": "2026-10-30T05:49:07.674Z"
+    },
+    {
+      "id": "e114cddd-29f2-4b7a-85dd-945cb0518064",
+      "inspectionNo": "퍼시스-시험26-10-00055",
+      "inspectionDate": "2026-10-28",
+      "vendor": "에픽",
+      "items": [
+        {
+          "itemName": "XHXX2501003",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469880_9y6uj_XHXX2501003 (2).jpg",
+            "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469889_b4520_XHXX2501003 (3).jpg",
+            "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469899_05hf0_XHXX2501003 (4).jpg",
+            "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469906_qgsaa_XHXX2501003 (5).jpg",
+            "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469926_gj21r_XHXX2501003.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": []
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=h95dUS3YeK9dv_rf_JLTlAPoz7tXNmcIuYuZqI1Lm9A",
+      "reportDocUrl": "",
+      "remarks": "현대인도 수출건",
+      "createdAt": "2026-11-02T09:41:09.933Z",
+      "itemName": "XHXX2501003",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "specialPhotoUrls": [],
+      "photoUrls": [
+        "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469880_9y6uj_XHXX2501003 (2).jpg",
+        "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469889_b4520_XHXX2501003 (3).jpg",
+        "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469899_05hf0_XHXX2501003 (4).jpg",
+        "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469906_qgsaa_XHXX2501003 (5).jpg",
+        "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469926_gj21r_XHXX2501003.jpg"
+      ],
+      "defectPhotoUrls": []
     },
     {
       "id": "c0913e02-6d83-4d5f-994f-155687e4c2bd",
