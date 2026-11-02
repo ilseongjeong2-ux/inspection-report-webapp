@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-02T09:46:29.688Z",
+  "exportedAt": "2026-11-02T09:59:49.111Z",
   "records": [
     {
       "id": "03e07b90-ca26-47a5-a6f4-ea12cd399073",
@@ -143,6 +143,62 @@
         "photos/e114cddd-29f2-4b7a-85dd-945cb0518064/1793612469926_gj21r_XHXX2501003.jpg"
       ],
       "defectPhotoUrls": []
+    },
+    {
+      "id": "b72c5561-412e-4239-81ed-1255695aa81e",
+      "inspectionNo": "퍼시스-시험26-10-00056",
+      "inspectionDate": "2026-10-21",
+      "vendor": "정운",
+      "items": [
+        {
+          "itemName": "IVN11CP05A",
+          "color": "WW",
+          "lotNo": "",
+          "quantity": 1,
+          "productType": "제품",
+          "result": "적합",
+          "defectDetail": "",
+          "remarks": "",
+          "photoUrls": [
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366169_q2b81_IMG_7364.jpg",
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366173_o2mt2_IMG_7365.jpg",
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366176_tqia5_IVN11CP05A.jpg",
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366182_nj9y9_IVN11CP05A_2.jpg"
+          ],
+          "defectPhotoUrls": [],
+          "specialPhotoUrls": [
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430740_1vdqw_IVN11CP05A_3.jpg",
+            "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430744_nuas0_ì¤í¬ë¦°ì· 2026-11-02 185222.png"
+          ]
+        }
+      ],
+      "inspector": "정일성",
+      "inspectionItem": "외관 및 치수",
+      "criteria": "1. 일반공차 ± 0.5 이내\r\n2. 퍼시스,일룸 이물질 0.4mm² 이내\r\n3. 평 엣지 및 45° 엣지 트리밍 상태\r\n4. 조립철물",
+      "requestDocUrl": "https://ep.fursys.com/WebFlow/view.do?flowNo=Gn3y7II8Yz8DlMjEolzsIAr376ttgQALNUpBvW8X5x4",
+      "reportDocUrl": "",
+      "remarks": "1. 초도 입고분 라스텍스 케이싱 보링깊이 부적합 확인 (정 5*15.5 , 부 5*15.1)\r\n2. 보링깊이 수정 후 재가공 완료",
+      "createdAt": "2026-11-02T09:56:06.192Z",
+      "itemName": "IVN11CP05A",
+      "color": "WW",
+      "lotNo": "",
+      "quantity": 1,
+      "result": "적합",
+      "defectDetail": "",
+      "specialPhotoUrls": [
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430740_1vdqw_IVN11CP05A_3.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430744_nuas0_ì¤í¬ë¦°ì· 2026-11-02 185222.png"
+      ],
+      "photoUrls": [
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366169_q2b81_IMG_7364.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366173_o2mt2_IMG_7365.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366176_tqia5_IVN11CP05A.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613366182_nj9y9_IVN11CP05A_2.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430740_1vdqw_IVN11CP05A_3.jpg",
+        "photos/b72c5561-412e-4239-81ed-1255695aa81e/1793613430744_nuas0_ì¤í¬ë¦°ì· 2026-11-02 185222.png"
+      ],
+      "defectPhotoUrls": [],
+      "updatedAt": "2026-11-02T09:57:10.747Z"
     },
     {
       "id": "c0913e02-6d83-4d5f-994f-155687e4c2bd",
